@@ -80,7 +80,7 @@ function App() {
           </div>}/>
 
           
-          
+  
       <Route path="/character/view" element={<ViewCharacter />} />
       <Route path="/character/build" element={<BuildCharacter />} />
       <Route path="/character/battle" element={<Battle />} />

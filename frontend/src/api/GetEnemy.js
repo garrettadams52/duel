@@ -5,7 +5,7 @@ const baseUrlMagic = "https://api.magicthegathering.io"
 
 const makeUrl = (baseUrl, relativeUrl) => `${baseUrl}/${relativeUrl}`
 
-export const getDitto = async () => {
+export const getPokemon = async () => {
     const response = await axios.get(makeUrl(baseUrlPoke,'pokemon/ditto'))
     return response.data;
 }

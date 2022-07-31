@@ -1,41 +1,25 @@
 import { useEffect, useState } from 'react'
-import { getDitto } from '../api/pokeapi'
-import characterData from '../data/character.json'
+import {getChars} from '../api/GetChars'
 
 const ViewCharacter = () => {
 
-    const [dittoData, setDittoData] = useState(null)
+    const [charData, setCharData] = useState(null)
 
-    const getSetDittoData = async () => {
-        const dd = await getDitto();
-        setDittoData(dd)
-
+    const getSetCharData = async () => {
+        const charData = await getChars();
+        setCharData(charData.data)
     }
 
     useEffect(() => {
-        getSetDittoData()
+        getSetCharData()
     }, [])
 
-    return <div>
-    {JSON.stringify(dittoData)}
-    {characterData.map((character) => {
-        return <div>
-            <h1>{character.title}</h1>
-            <div>
-             Class: {character.class}
-            </div>
-            <div>
-             Weapon: {character.weapon}
-            </div>
-            <div>
-             Scores: {character.attack}, {character.defense}
-            </div>
-            <div>
-             Moves: {character.moves.join(',')}
-            </div>
+    console.log(charData)
+    return (
+        <div>
+            Data:
         </div>
-    })}
-    </div>
+    )
 }
 
 export default ViewCharacter;

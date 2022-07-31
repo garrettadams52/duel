@@ -38,3 +38,12 @@ class Moves(models.Model):
     accuracy = models.IntegerField()
     magical = models.BooleanField()
     character = models.ManyToManyField(Character)
+
+class BaseCharacter(models.Model):
+    strength = models.IntegerField()
+    defense = models.IntegerField()
+    accuracy = models.IntegerField()
+    evasion = models.IntegerField()
+    wisdom = models.IntegerField()
+    spirit = models.IntegerField()
+    type = models.CharField(max_length=255)

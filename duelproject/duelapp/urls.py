@@ -7,6 +7,9 @@ urlpatterns = [
     path('signup', views.sign_up),
     path('login',views.log_in),
     path('logout',views.log_out),
-    path('whoami',views.who_am_i)
+    path('whoami',views.who_am_i),
+    path('basecharacters',views.return_base_characters),
+    path('createcharacter',views.create_character),
+    path('characters',views.return_characters)
 
 ]

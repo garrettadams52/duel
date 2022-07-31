@@ -1,3 +1,16 @@
+
+TODO: 
+DB for base characters?
+
+Create Enemy Character on the front end
+    Get traits from 3 API's and display image and log traits
+
+Finish NavBar and Page Navigation
+
+Outline Models and send to instructors, Project Doc
+
+
+db -> assessment_5
 Duel Arena 
 
 MVP: This is a turn based character creation/battle game. 
@@ -43,13 +56,3 @@ character FK >-< Characters.id
 
 
 
-
-
-TODO:
-
-Create Enemy Character on the front end
-    Get traits from 3 API's and display image and log traits
-
-Finish NavBar and Page Navigation
-
-Outline Models and send to instructors, Project Doc

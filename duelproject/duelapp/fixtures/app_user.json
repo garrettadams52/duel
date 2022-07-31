@@ -1,0 +1,10 @@
+[
+    {
+        "model":"duelapp.appuser",
+        "pk": 1,
+        "fields":{
+            "email": "garrett@gmail.ol",
+            "password": "password"
+        }
+    }
+]

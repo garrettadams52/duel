@@ -1,0 +1,46 @@
+.spriteCleric{
+    background: url(../../assets/Cleric.png);
+}
+
+.spriteDwarf{
+    background: url(../../assets/Dwarf.png);
+    filter: hue-rotate(100%)
+}
+
+.spriteElf{
+    background: url(../../assets/Elf.png);
+}
+
+.spriteFighter{
+    background: url(../../assets/Fighter.png);
+}
+
+.icon{
+    width: 82px;
+    height: 105px;
+    background-position: 0px -10px;
+}
+
+.dispCleric{
+    background-position: -7px -2953px; 
+    width: 355px;
+    height: 245px;
+}
+
+.dispDwarf{
+    background-position: -7px -2576px; 
+    width: 309px;
+    height: 224px;
+}
+
+.dispElf{
+    background-position: -9px -2413px; 
+    width: 361px;
+    height: 244px;
+}
+
+.dispFighter{
+    background-position: -5px -3378px; 
+    width: 262px;
+    height: 279px;
+}

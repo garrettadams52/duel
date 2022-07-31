@@ -1,4 +1,3 @@
-
 function Character({name,moves}){
 
 
