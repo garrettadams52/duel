@@ -7,6 +7,7 @@ export default defineConfig({
   base: '/static/',
   build: {
     outDir: '../duelproject/static',
+    sourcemap: true,
     emptyOutDir: true,
   },
   

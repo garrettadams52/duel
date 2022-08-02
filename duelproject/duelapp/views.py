@@ -15,7 +15,7 @@ def home(request):
 @api_view(['POST'])
 def sign_up(request):
     try:
-        User.objects.create_user(username=request.data['email'], password=request.data['password'], email=request.data['email'])
+        User.objects.create_user(last_name=request.data['last_name'], first_name=request.data['first_name'], username=request.data['email'], password=request.data['password'], email=request.data['email'])
     except Exception as e:
         print(str(e))
     return HttpResponse('hi')
@@ -58,7 +58,7 @@ def who_am_i(request):
     # Make sure that you don't send sensitive information to the client, such as password hashes
     # raise Exception('oops')
     if request.user.is_authenticated:
-        data = serializers.serialize("json", [request.user], fields=['email', 'username'])
+        data = serializers.serialize("json", [request.user], fields=['email', 'username','first_name','last_name'])
         return HttpResponse(data)
     else:
         return JsonResponse({'user':None})
