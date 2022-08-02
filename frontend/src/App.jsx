@@ -11,7 +11,6 @@ import { getMoves } from './api/GetMoves';
 import LoginPage from './pages/LoginPage';
 import { createTheme,ThemeProvider } from '@mui/material';
 
-
 export const themeOptions = createTheme({
   palette: {
     type: 'dark',
@@ -23,7 +22,7 @@ export const themeOptions = createTheme({
     },
   },
   spacing: 8,
-  direction: 'rtl',
+  direction: 'ltr',
   shape: {
     borderRadius: 4,
   },

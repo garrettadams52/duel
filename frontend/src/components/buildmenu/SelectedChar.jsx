@@ -5,7 +5,7 @@ function SelectedChar({selectChar}){
 
         <div className='row'>
             <div className='col-md-6'>
-                <img className={`disp${selectChar['fields']['type']} sprite${selectChar['fields']['type']}`}></img>
+                <div className={`disp${selectChar['fields']['type']} sprite${selectChar['fields']['type']}`}></div>
             </div>
             <div className='col-md-6'>
                 <ul style={{'list-style':'none'}}>

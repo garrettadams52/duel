@@ -3,14 +3,15 @@ import './characterbuild.css'
 function BaseChar(props){
 
 return(
-    props.baseCharData.map((character, index) => {
+    
+        props.baseCharData.map((character, index) => {
         let moveArr = []
         props.moves[character['fields']['type']].forEach(elem => {
             moveArr.push(elem['fields']['name'])
         });
         return <div className='col-md-3'>
             <ul style={{'list-style':'none'}}>
-                <li><img className={`icon sprite${character['fields']['type']}`}></img></li>
+                <li> <div style = {{'margin': '0 auto'}} className={`icon sprite${character['fields']['type']}`}></div></li>
                 <li>Type: {character['fields']['type']}</li>
                 <li>Strength: {character['fields']['strength']}</li>
                 <li>Defense: {character['fields']['defense']}</li>

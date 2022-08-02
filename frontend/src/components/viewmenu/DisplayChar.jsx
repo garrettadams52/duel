@@ -28,7 +28,7 @@ function DisplayChar(props){
             });
             return <div className='col-md-2'>
                 <ul style={{'list-style':'none'}}>
-                    <li><img className={`icon sprite${character['fields']['type']}`}></img></li>
+                    <li><div style = {{'margin': '0 auto'}} className={`icon sprite${character['fields']['type']}`}></div></li>
                     <li>Type: {character['fields']['type']}</li>
                     <li>Level: {character['fields']['level']}</li>
                     <li>Experience: {character['fields']['experience']}</li>

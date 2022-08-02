@@ -1,43 +1,39 @@
-import { getCards, getPokemon } from "../../api/GetEnemy"
+import { getAttacks, getPokemon } from "../../api/GetEnemy"
 import {useState,useEffect} from "react"
-import './healthbar.css'
+import './dueling.css'
 
 
-function Enemy({name,moves,turn,setTurn}){
+function Enemy({name,moves,turn,setTurn,playerTwoHealth, setPlayerOneHealth}){
     let turnCss = "color"
 
-    //Enemy needs an image, strength, defense, accuracy, evasion, wisdom, spirit, name, and 3 moves
-    //Image -> Pokemon
-    //Stats -> Calculated
-    //Name -> Magic Subtypes
-    //Moves -> DnD Moves
-
     const [pokeData, setPokeData] = useState(null)
+    const [attackData, setAttackData] = useState(null)
 
-    const getSetPokeData = async () => {
+    const getSetEnemyData = async () => {
         const poke = await getPokemon();
+        const attacks = await getAttacks();
         const img = poke.sprites.front_default
         setPokeData(img)
-
+        setAttackData(attacks)
     }
 
+    const attack = () => {
+        console.log("testing")
+        setTurn("Player One")
+      }
+
     useEffect(() => {
-        getSetPokeData()
+        getSetEnemyData()
     }, [])
 
-
+    
     turn === "Player Two" ? turnCss = "color" : turnCss = "false"
     return (
         <div>
             <h1>Player Two</h1>
-            <div class="health-bar">
-                <div class="health-bar-glass">
-                    <div class="health-bar-fluid anim-width"></div>
-                </div>
-            </div>
-            <span>{moves.join(',')}</span>
-            <img className={turnCss} src={pokeData}></img>
-            <button onClick={()=>setTurn("Player One")}>End Turn</button>
+            <h2>{playerTwoHealth} </h2>
+            <div><img className={turnCss} src={pokeData}></img></div>
+            {attackData && <div> {attackData.map(elem => <button onClick={()=>attack()}>{elem}</button>)} </div>}
         </div>
     )
   }

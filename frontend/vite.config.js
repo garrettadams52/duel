@@ -7,8 +7,8 @@ export default defineConfig({
   base: '/static/',
   build: {
     outDir: '../duelproject/static',
-
     emptyOutDir: true,
   },
+  
   plugins: [react()]
 })
