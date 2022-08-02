@@ -2,10 +2,45 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import axios from 'axios'
 import {HashRouter as Router, Routes, Route} from 'react-router-dom'
-import ViewCharacter from './pages/CharacterView';
-import BuildCharacter from './pages/CharacterBuild';
+import ViewCharacter from './pages/ViewCharacter';
+import BuildCharacter from './pages/BuildCharacter';
 import Battle from './pages/Battle';
 import NavBar from './components/NavBar';
+import {getChars} from './api/GetChars'
+import { getMoves } from './api/GetMoves';
+import LoginPage from './pages/LoginPage';
+import { createTheme,ThemeProvider } from '@mui/material';
+
+
+export const themeOptions = createTheme({
+  palette: {
+    type: 'dark',
+    primary: {
+      main: '#3f51b5',
+    },
+    secondary: {
+      main: '#92103e',
+    },
+  },
+  spacing: 8,
+  direction: 'rtl',
+  shape: {
+    borderRadius: 4,
+  },
+  overrides: {
+    MuiAppBar: {
+      colorInherit: {
+        backgroundColor: '#689f38',
+        color: '#fff',
+      },
+    },
+  },
+  props: {
+    MuiAppBar: {
+      color: 'inherit',
+    },
+  },
+});
 
 function getCookie(name) {
   let cookieValue = null;
@@ -26,71 +61,38 @@ const csrftoken = getCookie('csrftoken');
 axios.defaults.headers.common['X-CSRFToken'] = csrftoken
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [charData, setCharData] = useState(null)
+  const [moveData, setMoveData] = useState(null)
   const [user, setUser] = useState(null)
 
-  const submitLoginForm = function(event){
-    event.preventDefault()
-    axios.post('/login',{email:'jeff@amazon.com', password:'dragons'}).then((response)=>{
-      console.log('response from server: ', response)
-      window.location.reload()
-    })
+  const getSetCharandMoveData = async () => {
+    const charData = await getChars();
+    setCharData(charData.data)
+    const moveData = await getMoves();
+    setMoveData(moveData)
   }
 
-  const whoAmI = async () => {
-    const response = await axios.get('/whoami')
-    const user = response.data && response.data[0] && response.data[0].fields
-    setUser(user)
-  }
-
-  const logOut = function(event){
-    event.preventDefault()
-    axios.post('/logout').then((response)=>{
-      console.log('response from server: ', response)
-      whoAmI()
-    })
-  }
-
-  const submitSignupForm = function(event){
-    event.preventDefault()
-    axios.post('/signup',{email:'jeff@amazon.com', password:'dragons'}).then((response)=>{
-      console.log('response from server: ', response)
-    })
-
-  }
-
-  useEffect(()=>{
-    whoAmI()
+  useEffect(() => {
+    getSetCharandMoveData()
   }, [])
 
-
-  return (
-    <div className="App">
-      <Router>
-      <NavBar />
-      <Routes>
-        <Route path='/' element={
-          <div>
-            
-            <h1>Dueling Site Login</h1>
-            {user && <p>Welcome, {user.email}</p>}
-            <button onClick={submitSignupForm}>Sign Up</button>
-            <button onClick={submitLoginForm}>Log In</button>
-            <button onClick={logOut}>Log Out</button>
-          </div>}/>
-
-          
   
-      <Route path="/character/view" element={<ViewCharacter />} />
-      <Route path="/character/build" element={<BuildCharacter />} />
-      <Route path="/character/battle" element={<Battle />} />
-          
-      </Routes>
-      
-      
-      </Router>
+  return (
 
+    <div className="App">
+    <ThemeProvider theme={themeOptions}>
+      <Router>
+      <NavBar user={user}/>
+        <Routes>
+          <Route path="/" element={<LoginPage user={user} setUser={setUser}/>} />
+          <Route path="/character/view" element={user && <ViewCharacter getSetCharandMoveData = {getSetCharandMoveData} moves={moveData} charData={charData}/>} />
+          <Route path="/character/build" element={user && moveData!=null && <BuildCharacter getSetCharandMoveData = {getSetCharandMoveData} moves={moveData}/>} />
+          <Route path="/character/battle" element={user && moveData!=null && <Battle moves={moveData} charData={charData}/>} />
+        </Routes>
+      </Router>
+    </ThemeProvider>
     </div>
+
   )
 }
 

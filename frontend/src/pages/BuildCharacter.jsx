@@ -4,7 +4,7 @@ import BaseChar from '../components/buildmenu/BaseChar'
 import SelectedChar from '../components/buildmenu/SelectedChar'
 import CreateChar from '../components/buildmenu/CreateChar'
 
-const BuildCharacter = () => {
+const BuildCharacter = (props) => {
 
     const [baseCharData, setBaseCharData] = useState(null)
     const [selectChar, setSelectChar] = useState(null)
@@ -21,9 +21,9 @@ const BuildCharacter = () => {
 
     return (
     <div className='row'>
-        {baseCharData && <BaseChar baseCharData={baseCharData} setSelectChar={setSelectChar}/>}
+        {baseCharData && <BaseChar moves={props.moves} baseCharData={baseCharData} setSelectChar={setSelectChar}/>}
         <div className='col-md-6'>{(selectChar != null) && <SelectedChar selectChar={selectChar}/>}</div>
-        <div className='col-md-6'>{(selectChar != null) && <CreateChar setSelectChar={setSelectChar} selectChar={selectChar}/>}</div>
+        <div className='col-md-6'>{(selectChar != null) && <CreateChar getSetCharandMoveData = {props.getSetCharandMoveData} setSelectChar={setSelectChar} selectChar={selectChar}/>}</div>
     </div>
     )
 }

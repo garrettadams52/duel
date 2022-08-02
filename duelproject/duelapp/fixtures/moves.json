@@ -1,0 +1,134 @@
+[
+    {
+        "model":"duelapp.moves",
+        "pk": 1,
+        "fields":{
+            "name": "smash",
+            "power": 5,
+            "accuracy": 4,
+            "magical": true,
+            "character": "3"
+        }
+    },
+    {
+        "model":"duelapp.moves",
+        "pk": 2,
+        "fields":{
+            "name": "push",
+            "power": 5,
+            "accuracy": 4,
+            "magical": true,
+            "character":"3"
+        }
+    },
+    {
+        "model":"duelapp.moves",
+        "pk": 3,
+        "fields":{
+            "name": "fire ball",
+            "power": 5,
+            "accuracy": 4,
+            "magical": true,
+            "character": "4"
+        }
+    },
+    {
+        "model":"duelapp.moves",
+        "pk": 4,
+        "fields":{
+            "name": "roar",
+            "power": 5,
+            "accuracy": 4,
+            "magical": true,
+            "character": "3"
+        }
+    },
+    {
+        "model":"duelapp.moves",
+        "pk": 5,
+        "fields":{
+            "name": "punch",
+            "power": 5,
+            "accuracy": 4,
+            "magical": true,
+            "character": "1"
+        }
+    },
+    {
+        "model":"duelapp.moves",
+        "pk": 6,
+        "fields":{
+            "name": "throw",
+            "power": 5,
+            "accuracy": 4,
+            "magical": true,
+            "character": "4"
+        }
+    },
+    {
+        "model":"duelapp.moves",
+        "pk": 7,
+        "fields":{
+            "name": "kick",
+            "power": 5,
+            "accuracy": 4,
+            "magical": true,
+            "character": "2"
+        }
+    },
+    {
+        "model":"duelapp.moves",
+        "pk": 8,
+        "fields":{
+            "name": "tackle",
+            "power": 5,
+            "accuracy": 4,
+            "magical": true,
+            "character": "1"
+        }
+    },
+    {
+        "model":"duelapp.moves",
+        "pk": 9,
+        "fields":{
+            "name": "headbutt",
+            "power": 5,
+            "accuracy": 4,
+            "magical": true,
+            "character": "2"
+        }
+    },
+    {
+        "model":"duelapp.moves",
+        "pk": 10,
+        "fields":{
+            "name": "shove",
+            "power": 5,
+            "accuracy": 4,
+            "magical": true,
+            "character": "4"
+        }
+    },
+    {
+        "model":"duelapp.moves",
+        "pk": 11,
+        "fields":{
+            "name": "bolt attack",
+            "power": 5,
+            "accuracy": 4,
+            "magical": true,
+            "character": "1"
+        }
+    },
+    {
+        "model":"duelapp.moves",
+        "pk": 12,
+        "fields":{
+            "name": "arrow",
+            "power": 5,
+            "accuracy": 4,
+            "magical": true,
+            "character": "2"
+        }
+    }
+]

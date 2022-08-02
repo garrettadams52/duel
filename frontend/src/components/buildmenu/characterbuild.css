@@ -4,7 +4,6 @@
 
 .spriteDwarf{
     background: url(../../assets/Dwarf.png);
-    filter: hue-rotate(100%)
 }
 
 .spriteElf{

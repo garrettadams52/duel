@@ -10,6 +10,8 @@ urlpatterns = [
     path('whoami',views.who_am_i),
     path('basecharacters',views.return_base_characters),
     path('createcharacter',views.create_character),
-    path('characters',views.return_characters)
+    path('characters',views.return_characters),
+    path('deletecharacter',views.delete_character),
+    path('moves',views.return_moves),
 
 ]

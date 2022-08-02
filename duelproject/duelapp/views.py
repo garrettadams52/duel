@@ -22,9 +22,6 @@ def sign_up(request):
 
 @api_view(['POST'])
 def log_in(request):
-    print(dir(request))
-    print(dir(request._request))
-
     # DRF assumes that the body is JSON, and automatically parses it into a dictionary at request.data
     email = request.data['email']
     password = request.data['password']
@@ -66,21 +63,37 @@ def who_am_i(request):
     else:
         return JsonResponse({'user':None})
 
-#send character data to frontend
 
+###########################################################
+
+
+#send character data to frontend
 def return_base_characters(request):
     base_characters = serializers.serialize("json",BaseCharacter.objects.all())
     return HttpResponse(base_characters)
 
-@csrf_exempt
 @api_view(['POST'])
 def create_character(request):
-    char_data = json.loads(request.body.decode('utf-8'))
+    char_data = request.data
     mock_user = User.objects.get(id=1)
-    new_char = Character(strength=char_data['strength'],defense=char_data['defense'],accuracy=char_data['accuracy'],evasion=char_data['evasion'],wisdom=char_data['wisdom'],spirit=char_data['spirit'],type=char_data['type'],level=0,experience=0,image='na',user=mock_user)
+    new_char = Character(strength=char_data['strength'],defense=char_data['defense'],accuracy=char_data['accuracy'],evasion=char_data['evasion'],wisdom=char_data['wisdom'],spirit=char_data['spirit'],type=char_data['type'],level=0,experience=0,user=request.user)
     new_char.save()
     return HttpResponse("success")
 
 def return_characters(request):
-    characters = serializers.serialize("json",Character.objects.all())
-    return HttpResponse(characters)
+    if(request.user.is_authenticated):
+        curr_user = User.objects.filter(email = request.user)
+        characters = serializers.serialize("json",Character.objects.filter(user_id = curr_user[0].id))
+        return HttpResponse(characters)
+    else:
+        return HttpResponse('')
+
+@api_view(['DELETE'])
+def delete_character(request):
+    del_char = json.loads(request.body.decode('utf-8'))
+    Character.objects.get(pk=del_char['pk']).delete()
+    return HttpResponse("success")
+
+def return_moves(request):
+    moves = serializers.serialize("json",Moves.objects.all())
+    return HttpResponse(moves)
