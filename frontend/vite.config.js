@@ -7,7 +7,7 @@ export default defineConfig({
   base: '/static/',
   build: {
     outDir: '../duelproject/static',
-    sourcemap: true,
+    chunkSizeWarningLimit: 1600,
     emptyOutDir: true,
   },
   

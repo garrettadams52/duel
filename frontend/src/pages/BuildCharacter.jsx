@@ -16,7 +16,7 @@ const BuildCharacter = (props) => {
 
     useEffect(() => {
         getSetBaseCharData()
-    }, [])
+    }, [selectChar])
 
 
     return (

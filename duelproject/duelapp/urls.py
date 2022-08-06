@@ -13,5 +13,7 @@ urlpatterns = [
     path('characters',views.return_characters),
     path('deletecharacter',views.delete_character),
     path('moves',views.return_moves),
+    path('addexp',views.add_exp),
+    path('updatename',views.update_name)
 
 ]

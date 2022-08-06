@@ -2,100 +2,19 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import axios from 'axios'
 import {HashRouter as Router, Routes, Route} from 'react-router-dom'
-import ViewCharacter from './pages/ViewCharacter';
+import View from './pages/View';
 import BuildCharacter from './pages/BuildCharacter';
 import Battle from './pages/Battle';
-import NavBar from './components/NavBar';
 import {getChars} from './api/GetChars'
 import { getMoves } from './api/GetMoves';
-import LoginPage from './pages/LoginPage';
-import { createTheme,ThemeProvider } from '@mui/material';
+import {ThemeProvider } from '@mui/material';
 import SignInSide from './pages/SignInPage'
 import SignUp from './pages/AccountCreation'
 import ResponsiveAppBar from './components/NavBar';
 import Account from './pages/Account';
+import { themeOptions } from './components/Theme';
 
-export const themeOptions = createTheme({
-    palette: {
-      type: 'dark',
-      primary: {
-        main: '#3f51b5',
-      },
-      secondary: {
-        main: '#92103e',
-      },
-    },
-    shape: {
-      borderRadius: 4,
-    },
-    direction: 'ltr',
-    overrides: {
-      MuiButton: {
-        root: {
-          background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
-          border: 0,
-          borderRadius: 3,
-          boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
-          color: 'white',
-          height: 48,
-          padding: '0 30px',
-        },
-      },
-    },
-    props: {
-      MuiList: {
-        dense: true,
-      },
-      MuiMenuItem: {
-        dense: true,
-      },
-      MuiTable: {
-        size: 'small',
-      },
-      MuiButton: {
-        size: 'small',
-      },
-      MuiButtonGroup: {
-        size: 'small',
-      },
-      MuiCheckbox: {
-        size: 'small',
-      },
-      MuiFab: {
-        size: 'small',
-      },
-      MuiFormControl: {
-        margin: 'dense',
-        size: 'small',
-      },
-      MuiFormHelperText: {
-        margin: 'dense',
-      },
-      MuiIconButton: {
-        size: 'small',
-      },
-      MuiInputBase: {
-        margin: 'dense',
-      },
-      MuiInputLabel: {
-        margin: 'dense',
-      },
-      MuiRadio: {
-        size: 'small',
-      },
-      MuiSwitch: {
-        size: 'small',
-      },
-      MuiTextField: {
-        margin: 'dense',
-        size: 'small',
-      },
-      MuiTooltip: {
-        arrow: true,
-      },
-    },
-  });
-
+//Create Cookie for session
 function getCookie(name) {
   let cookieValue = null;
   if (document.cookie && document.cookie !== '') {
@@ -113,6 +32,7 @@ function getCookie(name) {
 }
 const csrftoken = getCookie('csrftoken');
 axios.defaults.headers.common['X-CSRFToken'] = csrftoken
+
 
 function App() {
   const [charData, setCharData] = useState(null)
@@ -140,10 +60,10 @@ function App() {
         <Routes>
           <Route path="/" element={<SignInSide user={user} setUser={setUser}/>} />
           <Route path="/signup" element={<SignUp/>} />
-          <Route path="/account" element={<Account/>} />
-          <Route path="/character/view" element={user && <ViewCharacter getSetCharandMoveData = {getSetCharandMoveData} moves={moveData} charData={charData}/>} />
-          <Route path="/character/build" element={user && moveData!=null && <BuildCharacter getSetCharandMoveData = {getSetCharandMoveData} moves={moveData}/>} />
-          <Route path="/character/battle" element={user && moveData!=null && <Battle moves={moveData} charData={charData}/>} />
+          <Route path="/account" element={user && <Account user={user}/>} />
+          <Route path="/view" element={user && moveData && charData && <View getSetCharandMoveData = {getSetCharandMoveData} moves={moveData} charData={charData}/>} />
+          <Route path="/build" element={user && moveData && <BuildCharacter getSetCharandMoveData = {getSetCharandMoveData} moves={moveData}/>} />
+          <Route path="/battle" element={user && moveData && <Battle getSetCharandMoveData = {getSetCharandMoveData} moves={moveData} charData={charData}/>} />
         </Routes>
       </Router>
     </ThemeProvider>

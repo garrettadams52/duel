@@ -1,25 +1,28 @@
-import { useState } from "react"
 import './startbattle.css'
+import  Button from "@mui/material/Button"
+import { useState,useEffect } from 'react'
+import BattleCard from './BattleCard'
+import Typography from '@mui/material/Typography';
+
+
 
 function StartBattle(props){
     
     let show = false
 
+    useEffect(() => {
+        props.getSetCharandMoveData()
+    }, [])
+
     return(
         <div>
-            <button onClick={props.BattleStart}>Start Duel</button>
-            <h1>Select Your Player</h1>
+            {(props.selChar || props.selChar == 0)&& <Button variant="outlined" onClick={props.BattleStart}>Start Duel</Button>}
+            <Typography gutterBottom variant="h5" component="div">Select Your Player</Typography>
             <div className="row">
             {props.charData.map((character, index) => {
                 props.selChar===index ? show = 'show' : show = false
                 return <div className='col-md-2'>
-                    <ul className={show} style={{'list-style':'none'}}>
-                        <li><div style = {{'margin': '0 auto'}} className={`icon sprite${character['fields']['type']}`}></div></li>
-                        <li>Type: {character['fields']['type']}</li>
-                        <li>Level: {character['fields']['level']}</li>
-                        <li>Experience: {character['fields']['experience']}</li>
-                        <li><button onClick={()=>props.setSelChar(index)}>Select</button></li>
-                    </ul>
+                    <BattleCard character={character} set={()=>props.setSelChar(index)} show={show}/>
                 </div>  
             })}
             </div>

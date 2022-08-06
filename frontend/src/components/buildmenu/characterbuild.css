@@ -15,9 +15,10 @@
 }
 
 .icon{
-    width: 82px;
-    height: 105px;
-    background-position: 0px -10px;
+    width: 82px !important; 
+    height: 105px !important;
+    background-position: 0px -10px !important;
+    background-size: auto !important;
 }
 
 .dispCleric{
@@ -39,9 +40,37 @@
 }
 
 .dispFighter{
-    background-position: -5px -3378px; 
-    width: 262px;
-    height: 279px;
+    background-position: -5px -3378px !important; 
+    width: 262px !important;
+    height: 279px !important;
+    background-size: auto !important;
 }
 
-img { border-style: none; }
+.battleCleric{
+    background-position: -1656px -2487px !important; 
+    width: 91px !important;
+    height: 92px !important;
+    background-size: auto !important;
+}
+
+.battleFighter{
+    background-position: -1873px -2927px !important; 
+    width: 73px;
+    height: 113px;
+    background-size: auto !important;
+}
+
+.battleElf{
+    background-position: -934px -2112px !important; 
+    width: 51px;
+    height: 115px;
+    background-size: auto !important;
+}
+
+.battleDwarf{
+    background-position: -1248px -1923px !important; 
+    width: 87px;
+    height: 96px;
+    background-size: auto !important;
+}
+

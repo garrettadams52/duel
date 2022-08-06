@@ -13,9 +13,12 @@ export const getPokemon = async () => {
 
 export const getAttacks = async () => {
     const response = await axios.get(makeUrl(baseUrlDnD,'spells'))
-    let movesArr = Array.from({length:3},()=> {
-        let rand = Math.floor(Math.random() * (319))
-        return response.data.results[rand]['name']
+    const movesArr = Array.from({length:3},()=> {
+            const rand = Math.floor(Math.random() * (319))
+            const randName = response.data.results[rand]['name']
+            const randAccuracy = Math.floor(Math.random() * (10))+1
+            const randPower = Math.floor(Math.random() * (10))+1
+        return {name:randName, accuracy:randAccuracy, power: randPower}
     })
     
     return movesArr

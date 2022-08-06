@@ -6,6 +6,7 @@ from django.contrib.auth import authenticate, login, logout
 from rest_framework.decorators import api_view
 from django.views.decorators.csrf import csrf_exempt
 import json
+from django.db.models import F
 
 # Create your views here.
 def home(request):
@@ -58,7 +59,7 @@ def who_am_i(request):
     # Make sure that you don't send sensitive information to the client, such as password hashes
     # raise Exception('oops')
     if request.user.is_authenticated:
-        data = serializers.serialize("json", [request.user], fields=['email', 'username','first_name','last_name'])
+        data = serializers.serialize("json", [request.user], fields=['email', 'username','first_name','last_name','date_joined'])
         return HttpResponse(data)
     else:
         return JsonResponse({'user':None})
@@ -75,8 +76,7 @@ def return_base_characters(request):
 @api_view(['POST'])
 def create_character(request):
     char_data = request.data
-    mock_user = User.objects.get(id=1)
-    new_char = Character(strength=char_data['strength'],defense=char_data['defense'],accuracy=char_data['accuracy'],evasion=char_data['evasion'],wisdom=char_data['wisdom'],spirit=char_data['spirit'],type=char_data['type'],level=0,experience=0,user=request.user)
+    new_char = Character(strength=char_data['strength'],defense=char_data['defense'],accuracy=char_data['accuracy'],evasion=char_data['evasion'],wisdom=char_data['wisdom'],spirit=char_data['spirit'],type=char_data['type'],level=0,experience=0,user=request.user, name= char_data['nickname'])
     new_char.save()
     return HttpResponse("success")
 
@@ -97,3 +97,16 @@ def delete_character(request):
 def return_moves(request):
     moves = serializers.serialize("json",Moves.objects.all())
     return HttpResponse(moves)
+
+@api_view(['POST'])
+def add_exp(request):
+    Character.objects.filter(pk=request.data['pk']).update(experience=F('experience')+request.data['exp'])
+    if(request.data['level_up']):
+        Character.objects.filter(pk=request.data['pk']).update(experience=F('experience')-100)
+        Character.objects.filter(pk=request.data['pk']).update(level=F('level')+1)
+    return HttpResponse("success")
+
+@api_view(['POST'])
+def update_name(request):
+    Character.objects.filter(pk=request.data['pk']).update(name=request.data['new_name'])
+    return HttpResponse("success")

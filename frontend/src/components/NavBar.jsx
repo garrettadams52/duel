@@ -13,11 +13,24 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import axios from 'axios'
-import {Routes, Route, useNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 const pages = ['View Characters', 'Build Characters', 'Battle'];
 const pagesObj = {'View Characters':'view', 'Build Characters':'build', 'Battle':'battle'};
 const settings = ['Account', 'Logout'];
+
+
+
+function stringAvatar(name) {
+  
+  return {
+    sx: {
+      bgcolor: 'black',
+    },
+    children: `${name.split(' ')[0][0]}${name.split(' ')[1][0]}`,
+  };
+}
+
 
 const ResponsiveAppBar = ({user}) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -58,8 +71,8 @@ const ResponsiveAppBar = ({user}) => {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-          <Typography
+          <span class="material-symbols-outlined">swords</span>
+        <Typography
             variant="h6"
             noWrap
             component="a"
@@ -108,7 +121,7 @@ const ResponsiveAppBar = ({user}) => {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography component="a" href={`#/character/${pagesObj[page]}`} textAlign="center">{page}</Typography>
+                  <Typography component="a" href={`#/${pagesObj[page]}`} textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>}
@@ -135,7 +148,7 @@ const ResponsiveAppBar = ({user}) => {
           {user && <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
-                href={`#/character/${pagesObj[page]}`}
+                href={`#/${pagesObj[page]}`}
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
@@ -145,11 +158,11 @@ const ResponsiveAppBar = ({user}) => {
             ))}
           </Box>}
 
-          {user && <Typography>Welcome, {user['first_name']}</Typography>}
+          {user && <Typography style = {{marginRight:'10px'}}>Welcome, {user['first_name']}  </Typography>}
           <Box sx={{ flexGrow: 0 }}>
             {user && <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="" />
+                <Avatar {...stringAvatar(`${user.first_name} ${user.last_name}`)} />
               </IconButton>
             </Tooltip>}
             

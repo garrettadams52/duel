@@ -1,0 +1,1310 @@
+  200  pip install requests
+  201  pip install requests_oauthlib
+
+  203  pip install python-dotenv
+  204  pip freeze > requirements.txt
+  205  git check-ignore
+  206  git check-ignore -v
+  207  git check-ignore -v example.log
+
+
+
+
+
+
+
+
+
+  217  code .
+  218  code .
+
+  220  python -m venv pok_venv
+  221  touch .gitignore
+  222  source .pok_venv/bin/activate
+  223  source pok_venv/bin/activate
+  224  pip install django
+  225  deactivate
+
+  227  rm -rf .git
+  228  code .
+  229  cd ..
+  230  rm -rf .git
+  231  cd ..
+  232  rm -rf .git
+  233  cd ..
+
+  235  cd Day4
+  236  cd django-pokemon-theme-team
+  237  code .
+  238  rm -rf .git
+  239  code .
+  240  psql postgres
+  241  psql school
+  242  brew install postgres
+ /usr/local/var/postgres
+  244  export PGDATA=/usr/local/var/postgres
+  245  postgres
+  246  source /Users/garrettadams/CodeP/Week5/Day4/django-pokemon-theme-team/pok_venv/bin/activate
+  247  cd ..
+  248  cd ..
+  249  cd ..
+
+  251  cd Projects
+  252  touch index.js
+  253  code .
+
+  255  rm -rf .git
+  256  git check-ignore pok_venv
+  257  git add .
+  258  rm -rf .git
+  259  ps
+  260  brew services stop postgres
+  261  ps
+  262  ps
+  263  cd ..
+  264  cd sql-queries
+  265  code .
+  266  createdb school
+  267  postgres
+  268  postgres -D /usr/local/var/postgres/
+
+  270  cd ..
+
+  272  mkdir Week6
+  273  cd Week6
+  274  mkdir Day1
+  275  cd Day1
+  276  code .
+  277  createdb school
+  278  psql school
+  279  git clone https://github.com/romeoplatoon/sql-basics.git
+  280  cd sql-basics
+  281  rm -rf .git
+  282  psql school < create_schema.sql
+  283  \d students
+  284  psql school
+  285  psql school < create_schema.sql
+  286  psql school
+  287  psql school < create_schema.sql
+  288  psql school
+  289  psql school < create_schema.sql
+  290  psql school < seed_data.sql
+  291  psql school < seed_data.sql
+  292  psql school < create_schema.sql
+  293  psql school < seed_data.sql
+  294  psql school < create_schema.sql
+  295  psql school < seed_data.sql
+  296  psql school < create_schema.sql
+  297  psql school < seed_data.sql
+  298  psql school < create_schema.sql
+  299  psql school < seed_data.sql
+  300  psql school < create_schema.sql
+  301  psql school < seed_data.sql
+  302  psql school
+  303  cd ..
+  304  git clone https://github.com/romeoplatoon/sql-queries.git
+  305  rm -rf .git
+  306  cd sql-basics
+  307  code .
+  308  cd ..
+  309  git clone https://github.com/romeoplatoon/assessment-3.git
+  310   cd assessment-3
+  311  rm -rf .git
+  312  code .
+  313  cd ..
+  314  python -m venv .venv
+  315  cd assessment-3
+  316  python -m venv .venv
+  317  source .venv/bin/activate
+  318  pip install django
+  319  django-admin startproject ecommerce .
+  320  python manage.py startapp ecommerce
+  321  python manage.py startapp e-commerce
+  322  python manage.py startapp commerce
+  323  django-admin startproject commerce_proj .
+  324  django-admin startproject commerce_proj .
+  325  python manage.py startapp commerce_app
+  326  python manage.py migrate
+
+
+
+
+
+
+
+
+
+
+
+
+
+  340  deactivate
+  341  source /Users/garrettadams/CodeP/Week6/assessment-3/.venv/bin/activate
+  342  /Users/garrettadams/CodeP/Week6/assessment-3/.venv/bin/python
+
+  344  cd CodeP
+
+  346  cd Week6
+
+  348  cd assessment-3
+
+  350  code .
+
+  352  /.venv/bin/activate
+  353  cd .venv
+
+  355  bin/activate
+
+  357  cd bin
+
+  359  activate
+  360  cd ..
+  361  cd ..
+  362  source /.venv/bin/activate
+  363  source /venv/bin/activate
+  364  source venv/bin/activate
+  365  source .venv/bin/activate
+  366  pip install django
+
+
+  369  deactivate
+  370  source .venv/bin/activate
+
+
+
+
+  375  pip install requests
+
+  377  pip install requests_oauthlib
+
+  379  deactivate
+  380  source .venv/bin/activate
+
+
+  383  pip install python-dotenv
+
+  385  pip freeze > requirements.txt
+
+
+
+  389  deactivate
+  390  source .venv/bin/activate
+
+
+  393  deactivate
+  394  cd ..
+  395  cd Day1
+  396  cd sql-basics
+  397  code .
+  398  psql school
+  399  psql school < create_schema.sql
+  400  postgres
+  401  psql school
+  402  psql school < seed_data.sql
+  403  SELECT * FROM students
+  404  psql school
+  405  psql school
+  406  psql school < create_schema.sql
+  407  psql school
+  408  postgres
+  409  postgres -D /usr/local/var/postgres/
+  410  psql school
+  411  postgres -D /usr/local/var/postgres/
+  412  ps -A | grep postgres
+  413  brew services stop postgres
+  414  ps -A
+  415  ps -A | grep postgres
+  416  brew services stop postgres
+  417  \q
+  418  ps -A | grep postgres
+  419  git clone https://github.com/romeoplatoon/django-queries.git
+  420  rm -rf .git
+  421  cd django-queries
+  422  rm -rf .git
+  423  python -m venv venv 
+  424  source venv/bin/activate
+  425  pip install -r requirements.txt
+  426  cd ormQueries
+  428  pip install django
+  430  cd ..
+  431  pip install -r requirements.txt
+  432  pip install psycopg2
+  433  pip install -r requirements.txt
+  434  pip freeze
+  435  cd ormQueries
+  437  ps -A | grep postgres
+  438  brew services stop postgres
+  439  deactivate
+  440  brew services stop postgres
+  441  pg_ctl stop
+  442  ps -A | grep postgres
+  443  brew services stop postgres
+  444  brew services restart -vvv postgresql
+  445  brew services stop postgres
+  446  brew services start postgres
+  447  ps -A | grep postgres
+  448  brew services stop postgres
+  449  ps -A | grep postgres
+  450  brew services stop postgres
+  451  sudo service postgresql stop
+  452  brew services start postgres
+  453  source venv/bin/activate
+  454  cd ..
+  455  source venv/bin/activate
+  456  cd ormQueries
+  458  createdb ormQueries
+  459  python manage.py makemigrations queries
+  460  python manage.py makemigrations products
+  461  python manage.py migrate
+  462  psql ormQueries
+  463  python manage.py shell
+  466  
+  470  psql ormQueries
+  477  
+  481  
+  484  
+  490  
+  496  
+  497  Count(Product.objects.filter(color='null')\n\q\nquit()\n\q
+  501  
+  505  
+  520  
+  527  
+  533  
+  541  
+  559  
+  623  cd ..
+  624  cd ..
+
+  626  cd CodeP
+
+  628  cd Week6
+
+  630  mkdir Day3
+  631  cd Day3
+  632  cd ..
+  633  cd ..
+  634  cd ~
+  635  cd projects/
+
+  637  mkdir proj5
+  638  cd proj5
+  639  code .
+  640  cd ..
+  641  cd ..
+
+  643  cd CodeP
+
+  645  cd Week6
+
+  647  mkdir Day5
+
+  649  cd Day5
+  650  code .
+  651  printenv > /var/folders/rs/2tw3j13j0rbg0tyh3tg2q7cc0000gn/T/tmp-88475sw1f0NGAJPhEtxt
+  652  source /Users/garrettadams/CodeP/Week5/Day2/hello-django-env/bin/activate
+  653  
+  654  source /Users/garrettadams/CodeP/Week5/Day2/hello-django-env/bin/activate
+  655  python -m venv venv 
+  656  source venv/bin/activate
+  657  pip install -r requirements.txt
+  658  install psycopg2
+  659  pip install psycopg2
+  660  pip install -r requirements.txt
+  661  pip install psycopg2
+  662  pip install django
+  663  pip install -r requirements.txt
+  664  pip freeze
+  668  psql data-validations
+  669  psql django_validations
+  674  
+  677  
+  679  
+  681  
+  683  
+  685  
+  687  
+  689  cd django-associations
+  690  source django-associations/venv/bin/activate
+  691  source venv/bin/activate
+  692  psql imdb
+  693  deactivate
+  694  psql imdb
+  695  source venv/bin/activate
+  696  python manage.py makemigrations imdb
+  697  cd imdb
+  698  python manage.py makemigrations imdb
+  699  python manage.py makemigrations imdb
+  700  python manage.py makemigrations moviedb
+  701  python manage.py makemigrations moviedb
+  702  python manage.py migrate
+  710  psql imdb
+  711  psql adfsdfg
+  712  python manage.py makemigrations imdb
+  713  python manage.py makemigrations moviedb
+  714  python manage.py migrate
+  717  psql imdb
+  718  cd ..
+  719  cd medium
+  720  source /Users/garrettadams/CodeP/Week7/Day1/django-validations/venv/bin/activate
+
+  722  cd django-associations
+
+  724  cd medium
+  725  python3 manage.py makemigrations blog
+  726  python3 manage.py migrate
+  727  createdb medium
+  728  python3 manage.py makemigrations blog
+  729  python3 manage.py migrate
+  735  python3 manage.py makemigrations blog
+  736  python3 manage.py migrate
+  738  python3 manage.py makemigrations blog
+  739  createdb medium
+  740  python3 manage.py makemigrations blog
+  741  python -m venv <envname>
+  742  python -m venv venv
+  743  source venv/bin/activate
+  744  pip install django
+  745  pip install psycopg
+  746  pip install psycopg2
+  747  createdb imdb
+  748  psql imdb
+  749  pip install -r requirements.txt
+  750  cd ..
+  751  code .
+  752  source /Users/garrettadams/CodeP/Week5/Day2/hello-django-env/bin/activate
+  754  source venv/bin/activate
+  788  deactivate
+  789  cd ..
+
+  791  git clone https://github.com/romeoplatoon/django-associations.git
+  792  cd django-associations
+  793  rm -rf .git
+  794  code .
+  795  source /Users/garrettadams/CodeP/Week6/Day5/django-queries/venv/bin/activate
+  796  cd ..
+  797  cd ..
+  798  cd ..
+  799  mkdir Week7
+  800  cd Week7
+
+  802  mkdir Day1
+  803  cd Day1
+  804  git clone https://github.com/romeoplatoon/django-validations.git
+  805  cd django-validations
+  806  rm -rf .git
+  807  code .
+  808  cd django-queries
+  809  code .
+  810  cd ..
+
+  812  cd ..
+
+  814  cd Week6
+  815  cd Day5
+
+  817  rm - rf .git
+  818  rm -rf .git
+  819  cd ..
+  820  cd ..
+
+  822  cd Week7
+
+  824  cd Day1
+
+  826  cd ..
+  827  mkdir Day5
+  828  cd Day5
+  829  git clone https://github.com/romeoplatoon/django-cars-and-brands.git
+  830  cd django-cars-and-brands
+  831  rm -rf .git
+  832  code .
+  833  python -m venv venv
+  834  source venv/bin/activate
+  835  pip install -r requirements.txt
+  836  pip install psycopg2
+  837  pip install -r requirements.txt
+  838  pip freeze
+  839  pip install django
+  840  pip freeze
+  841  createdb car_app
+
+  843  cd car_app
+
+  845  source /Users/garrettadams/CodeP/Week7/Day5/django-cars-and-brands/venv/bin/activate
+  846  python manage.py makemigrations
+  847  cd car_app
+  848  python manage.py makemigrations
+  849  python manage.py makemigrations
+  850  python manage.py migrate
+  851  psql car_app
+  852  manage.py loaddata cars_and_brands
+  853  python manage.py loaddata cars_and_brands
+  854  pip freeze
+  855  pip install pyyaml
+  856  python manage.py loaddata cars_and_brands
+  857  python manage.py loaddata cars_and_brands
+  858  python manage.py loaddata brand_data
+  859  python manage.py loaddata brand_data
+  860  python manage.py loaddata car_data
+  861  python manage.py loaddata car_data
+  862  python manage.py loaddata car_data
+  863  source /Users/garrettadams/CodeP/Week7/Day5/django-cars-and-brands/venv/bin/activate
+
+  865  cd car_app
+
+  867  deactivate
+  868  cd ..
+  869  cd ..
+  870  cd ..
+  871  cd ..
+  872  mkdir Week8
+  873  cd Week8
+  874  mkdir Day1
+  875  mkdir Day2
+  876  mkdir Day3
+  877  cd Day1
+  878  git clone https://github.com/romeoplatoon/django-view-counter.git
+  879  cd django-view-counter
+  880  rm -rf .git
+  881  code .
+
+  883  cd CodeP
+
+  885  mkdir Week9
+  886  cd Week9
+  887  mkdir Day1
+  888  cd Day1
+  889  git clone https://github.com/romeoplatoon/reac.git
+  890  cd reac
+  891  cd ..
+  892  git clone https://github.com/romeoplatoon/react-detention.git
+  893  git clone https://github.com/romeoplatoon/react-state-abbreviator.git
+  894  cd react-detention
+  895  rm -rf .git
+  896  cd ..
+  897  cd react-state-abbreviator
+  898  rm -rf .git
+  899  cd ..
+  900  cd reac
+  901  rm -rf .git
+  902  cd ..
+  903  cd reac
+  904  code .
+  905  npx create-react-ap
+  906  c
+  907  npm start
+  908  cd ..
+  909  npm create vite
+  910  c\n
+  911   npm start
+  912  npm start
+  913  npm install
+  914  npm run dev
+  915  cd ..
+  916  cd ~
+
+  918  mkdir ReactCourse
+  919  cd ReactCourse
+  920  code .
+  921  npm create detention
+  922  npm create vite
+  923  cd detention
+  924  npm install
+  925  npm run dev
+  926  cd ..
+  927  cd ..
+  928  cd reac
+  929  c
+  930  npm run dev
+  931  cd ..
+  932  cd reac
+  933  code .
+  934  npm create vite
+  935  cd abbreviator
+  936  npm install
+  937  npm run dev
+  938  cd ..
+  939  cd ..
+  940  cd reac
+  941  c
+  942  npm run dev
+  943  code .
+  944  npm run dev
+  945  cd ..
+  946  cd ..
+  947  cd react-state-abbreviator
+  948  cd abbreviator
+  949  npm run dev
+  950  cd ..
+  951  code .
+  952  cd ..
+  953  cd react-detention
+  954  code .
+  955  cd ~
+  956  cd CodeP
+  957  cd Week9
+  958  cd Day1
+  959  cd reac
+  960  code .
+  961  cd ~
+  962  cd CodeP
+  963  cd Week9
+  964  cd Day1
+  965  cd react-state-abbreviator
+  966  code .
+  967  cd ..
+  968  code .
+  969  npm create vite
+  970  cd palindrome
+  971  npm install
+  972  npm run dev
+  973  cd ..
+  974  cd ..
+  975  cd ..
+  976  mkdir ReactPrac
+  977  cd ReactPrac
+  978  code .
+  979  cd ..
+  980  cd ..
+  981  mkdir Day2
+  982  cd Day2
+  983  git clone https://github.com/romeoplatoon/react-palindrome.git
+  984  cd react-palindrome
+  985  rm -rf .git
+  986  code .
+  987  cd ..
+  988  cd react-state-abbreviator
+  989  code .
+  990  c
+  991  npm run dev
+  992  npm run dev
+  993  cd ..
+  994  c
+  995  npm run dev
+  996  cd ..
+  997  cd ..
+  998  cd react-state-abbreviator
+  999  cd abbreviator
+ 1000  code .
+ 1001  npx create-react-app testfrontend
+ 1002  cd testfrontend
+ 1003  npm start
+ 1004  
+ 1005  npm install --save react-router
+ 1006  npm install --save react-router-dom
+ 1007  npm start
+ 1008  cd ..
+ 1009  mkdir todo-server
+ 1010  npm init -y
+ 1011  
+ 1012  cd todo-server
+ 1013  npm init -y
+ 1014  npm install --save express sequelize cors dotenv
+ 1015  npm install --save-dev sequelize-cli nodemon
+ 1016  npm install --save pg pg-hstore
+ 1017  npx sequelize-cli init
+ 1018  npx sequelize-cli model:generate --name Todolist --attributes name:string,status:string,description:string
+ 1019  npx sequelize-cli db:migrate
+ 1020  npx sequelize-cli db:migrate
+ 1021  npx sequelize-cli db:migrate
+ 1022  cd ..
+ 1023  cd ReactPrac
+ 1024  code .
+ 
+ 
+ 
+ 1028  cd testfrontend
+ 
+ 1030  npm i axios
+ 1031  npm start
+ 1032  cd ..
+ 1033  cd ..
+ 1034  cd Week9
+ 
+ 1036  mkdir Day3
+ 1037  cd Day3
+ 1038  git clone https://github.com/romeoplatoon/react-mad-libs.git
+ 1039  cd react-mad-libs
+ 1040  rm -rf .git
+ 1041  code .
+ 1042  npm install
+ 1043  npm audit fix
+ 1044  npm run dev
+ 1045  cd ..
+ 1046  cd ..
+ 1047  cd ..
+ 1048  cd ReactPrac
+ 
+ 1050  code .
+ 1051  cd craigslist_proj
+ 1052  python manage.py startapp craigslist_app
+ 1053  cd ..
+ 1054  source assessment4_venv/bin/activate
+ 1055  cd craigslist_proj
+ 1056  python manage.py startapp craigslist_app
+ 1057  pip install psycopg2
+ 1058  createdb craigslist_db
+ 1059  psql craigslit_db
+ 1060  psql craigslist_db
+ 1061  dropdb craigslist_db
+ 1062  psql craigslist_db
+ 1063  createdb assessment_four
+ 1064  psql assessment_four
+ 1065  python manage.py makemigrations
+ 1066  install python-tk
+ 1067  python manage.py makemigrations
+ 1068  python3 -m tkinter
+ 1069  sudo apt install python3-tk -y
+ 1070  python manage.py makemigrations
+ 1071  python manage.py makemigrations craigslist_app
+ 1072  python manage.py makemigrations
+ 1073  python manage.py makemigrations craigslist_app
+ 1074  
+ 1075  python manage.py makemigrations craigslist_app
+ 1076  python manage.py makemigrations craigslist_app
+ 1077  import _tkinter
+ 1078  python manage.py makemigrations craigslist_app
+ 1079  pip freeze
+ 1080  pip install tkinter
+ 1081  pip install tkinter
+ 1082  brew install python-tk
+ 1083  python manage.py makemigrations craigslist_app
+ 1084  psql assessment_four
+ 1085  deactivate
+ 1086  psql assessment_four
+ 1087  python manage.py migrate
+ 
+ 1089  cd ..
+ 
+ 1091  source assessment4_venv/bin/activate
+ 
+ 1093  cd craigslist_proj
+ 
+ 1095  source /Users/garrettadams/CodeP/Week9/Day5/assessment-4/assessment4_venv/bin/activate
+ 1096  deactivate
+ 1097  psql assessment_four
+ 1098  psql Todoapp
+ 1099  psql assessment_four
+ 1100  source /Users/garrettadams/CodeP/Week9/Day5/assessment-4/assessment4_venv/bin/activate
+ 
+ 1102  cd craigslist_proj
+ 
+ 
+ 1105  source /Users/garrettadams/CodeP/Week9/Day5/assessment-4/assessment4_venv/bin/activate
+ 1106  pip freeze > requirements.txt
+ 1107  rm -rf .git
+ 1108  code .
+ 1109  deactivate
+ 1110  code .
+ 1111  git status --ignored
+ 1112  git status --ignored
+ 1113  git check-ignore
+ 1114  git check-ignore .assessment4_venv
+ 1115  git status
+ 1116  touch .gitignore
+ 1117  git status
+ 1118  git status
+ 1119  git rm -r --cached .
+ 1120  git add README.md
+ 1121  git add craigslist_proj/
+ 1122  git add requirements.txt
+ 1123  git status
+ 1124  git commit -m "done"
+ 1125  git push
+ 1126  rm -rf .git
+ 1127  code .
+ 1128  source /Users/garrettadams/CodeP/Week9/Day5/assessment-4/assessment4_venv/bin/activate
+ 1129  psql list
+ 1130  psql
+ 1131  postgres
+ 1132  postgres list
+ 1133  postgres --help
+ 1134  psql -U postgres
+ 1135  psql assessment_four
+ 1136  dropdb assessment_four
+ 1137  dropdb assessment_four
+ 1138  createdb assessment_four
+ 1139  psql assessment_four
+ 1140  python manage.py makemigrations craigslist_app
+ 1141  cd craigslist_proj
+ 1142  python manage.py makemigrations craigslist_app
+ 1143  python manage.py migrate
+ 1144  python manage.py loaddata categories
+ 1145  python manage.py loaddata posts
+ 1146  psql assessment_four
+ 1147  python -m venv assessment4_venv
+ 1148  source assessment4_venv/bin/activate
+ 1149  pip install django
+ 1150  python -m django startproject craigslist_proj
+ 1151  cd craigslist_proj
+ 
+ 1153  deactivate
+ 1154  source assessment4_venv/bin/activate
+ 
+ 1156  cd ..
+ 1157  source assessment4_venv/bin/activate
+ 1158  cd craigslist_proj
+ 
+ 
+ 
+ 
+ 1163  python manage.py migrate
+ 1164  psql assessment_four
+ 1165  python manage.py makemigrations 
+ 1166  python manage.py makemigrations 
+ 1167  python manage.py makemigrations 
+ 1168  python manage.py migrate
+ 1169  python manage.py makemigrations 
+ 1170  python manage.py migrate
+ 1171  python manage.py makemigrations 
+ 1172  python manage.py migrate
+ 1173  python manage.py makemigrations 
+ 1174  python manage.py migrate
+ 1175  dropdb assessment_four
+ 1176  dropdb assessment_four
+ 1177  dropdb assessment_four
+ 1178  psql assessment_four
+ 1179  createdb assessment_four
+ 1180  python manage.py createmigrations
+ 1181  python manage.py makemigrations
+ 1182  python manage.py migrate
+ 1183  python manage.py makemigrations
+ 1184  python manage.py migrate
+ 1185  psql \list
+ 1186  psql assessment_four
+ 1187  python manage.py makemigrations
+ 1188  python manage.py migrate
+ 1189  psql assessment_four
+ 1190  python manage.py loaddata posts
+ 1191  python manage.py loaddata posts
+ 1192  python manage.py loaddata posts
+ 1193  python manage.py loaddata posts
+ 1194  python manage.py loaddata posts
+ 1195  python manage.py loaddata categories
+ 1196  python manage.py loaddata categories
+ 1197  python manage.py loaddata posts
+ 1198  npm install axios
+ 
+ 
+ 
+ 
+ 1203  cd ..
+ 
+ 1205  cd Week9
+ 
+ 1207  mkdir Day4
+ 1208  cd Day4
+ 1209  git clone https://github.com/romeoplatoon/react-hangman.git
+ 1210  cd react-hangman
+ 1211  rm -rf .git
+ 1212  code .
+ 1213  cd ..
+ 
+ 1215  cd Week9
+ 
+ 1217  mkdir Day5
+  Day5
+ 1219  cd Day5
+ 1220  git clone https://github.com/romeoplatoon/assessment-4.git
+ 
+ 1222  cd assessment-4
+ 1223  rm -rf .git
+ 1224  code .
+ 1225  cd assessment-4
+ 1226  code .
+ 1227  code .
+ 1228  cd ..
+ 1229  cd ..
+ 1230  cd Day5
+ 1231  code .
+ 1232  npm install axios
+ 1233  import react-aync
+ 1234  npm install react-async
+ 1235  npm create vite
+ 1236  cd hangman
+ 1237  npm install
+ 1238  npm run dev
+ 1239  git status
+ 1240  source /Users/garrettadams/CodeP/Week9/Day5/assessment-4/assessment4_venv/bin/activate
+ 1241  cd ..
+ 1242  cd ..
+ 1243  cd ..
+ 1244  mkdir Week10
+ 1245  cd Week10
+ 1246  mkdir Day1
+ 1247  cd Day1
+ 1248  git clone https://github.com/Zaynab-CP/news-site-iii-initial-code.git
+ 1249  cd news-site-iii-initial-code
+ 1250  rm -rf .git
+ 1251  code .
+ 1252  cd craigslist_proj
+ 1253  cd ..
+ 1254  source assessment4_venv/bin/activate
+ 1255  cd craigslist_proj
+ 
+ 1
+ 1258  
+ 
+ 1260  npm install
+ 1261  npm run dev
+ 1262  cd ..
+ 1263  cd ..
+ 1264  cd ..
+ 1265  cd Week9
+ 1266  cd Day5
+ 1267  cd assessment-4
+ 1268  code .
+ 1269  cd ..
+ 1270  cd ..
+ 1271  cd ..
+ 1272  cd ReactPrac
+ 1273  mkdir TicTacToe
+ 1274  cd TicTacToe
+ 1275  code .
+ 1276  npm create vite
+ 1277  cd TicTacToe
+ 1278  npm install
+ 1279  npm run dev
+ 1280  npm run start
+ 1281  npm run dev
+ 1282  npm run dev
+ 1283  npm run dev
+ 1284  cd ..
+ 1285  cd ..
+ 1286  cd Week9
+ 1287  cd Day4
+ 
+ 1289  cd ..
+ 1290  cd Day3
+ 
+ 1292  cd ..
+ 1293  cd Day2
+ 
+ 1295  cd ..
+ 1296  mkdir NewsSite
+ 1297  cd NewsSite
+ 1298  code . 
+ 
+ 1300  cd ..
+ 
+ 1302  cd REAMDE.md
+ 1303  code .
+ 1304  git clone https://github.com/romeoplatoon/react-news-site-i.git
+ 1305  cd react-news-site-i
+ 1306  rm -rf .git
+ 1307  npm run dev
+ 1308  cd ..
+ 1309  npm create vite news-site-i
+ 1310  cd news-site-i
+ 1311  npm install
+ 1312  npm run dev
+ 1313  npm run dev
+ 1314  npm run dev
+ 1315  npm run dev
+ 1316  cd w10tack-django-react
+ 
+ 1318  cd ..
+ 1319  python -m venv duel_app_venv
+ 1320  source duel_app_venv/bin/activate
+ 1321  pip install django
+ 1322  python -m django startproject duelproject
+ 1323  mkdir duel
+ 1324  cd duel
+ 1325  pip install django
+ 1326  cd duelproject
+ 1327  python manage.py runsever
+ 
+ 1329  deactivate
+ 1330  cd ..
+ 1331  python -m venv duel_venv
+ 1332  source duel_venv/bin/activate
+ 1333  pip install django
+ 1334  cd duelproject
+ 
+ 1336  npm create vite
+ 1337  cd frontend
+ 1338  npm install
+ 1339  npm run dev
+ 1340  cd ..
+ 1341  cd duelproject
+ 
+ 1343  python manage.py startapp duelapp
+ 
+ 1345  manage.py runserver
+ 
+ 
+ 
+ 1349  python manage.py makemigrations
+ 1350  python manage.py migrate
+ 
+ 1352  pip install djangorestframework
+ 
+ 1354  pip install djangorestframework
+ 
+ 
+ 
+ 
+ 
+ 
+ 1361  cd ..
+ 1362  cd frontend
+ 
+ 1364  npm start
+ 1365  npm run dev
+ 1366  source /Users/garrettadams/CodeP/Week9/Day5/assessment-4/assessment4_venv/bin/activate
+ 1367  cd duel
+ 1368  cd frontend
+ 1
+ 1370  deactivate
+ 1
+ 1
+ 1
+ 1374  npm install axios
+ 1
+ 1
+ 1
+ 1378  install react-router-dom
+ 1379  npm install react-router-dom
+ 1
+ 1381  cd ..
+ 1382  cd ..
+ 
+ 1384  cd testfrontend
+ 1385  code .
+ 1386  cd ..
+ 
+ 1388  cd NewsSite
+ 1389  code .
+ 1390  npx create vite news-site-ii
+ 
+ 1392  npx create vite news-site-ii
+ 1393  npx install vite
+ 1394  npx create vite news-site-ii
+ 1395  npx vite
+ 1396  npm create vite
+ 1397  cd news-site-ii
+ 1398  npm install
+ 1399  npm run dev
+ 1400  npm run dev
+ 1401  cd ..
+ 1402  cd ..
+ 1403  cd ..
+ 1404  mkdir PersonalProject
+ 1405  cd PersonalProject
+ 1406  code .
+ 1407  code .
+ 1408  cd duel/frontend
+ 1
+ 1410  cd news-site-ii
+ 1411  npm install react-bootstrap bootstrap
+ 1412  $ npm install react-router-dom --save
+ 1413  npm install
+ 1414  $ npm install react-router-dom --save
+ 1415  npm install react-router-dom --save
+ 1416  cd ..
+ 1417  cd ..
+ 1418  cd ..
+ 
+ 1420  cd PersonalProject
+ 
+ 1422  cd duel
+ 1423  cd duelproject
+ 
+ 
+ 1426  cd ..
+ 
+ 1428  source duel_venv/activate/bin
+ 1429  source duel_venv/bin/activate
+ 1430  cd duelproject
+ 
+ 1432  cd ..
+ 1433  cd ..
+ 
+ 1435  cd PersonalProject
+ 1436  code .
+ 
+ 1438  cd CodeP
+ 
+ 1440  cd PersonalProject
+ 
+ 1442  cd duel
+ 1443  cd ..
+ 1444  code .
+ 
+ 1446  cd TicTacToe
+ 
+ 1448  npm run dev
+ 1449  cd ..
+ 1450  cd ..
+ 1451  cd ReactPrac
+ 
+ 1453  cd ..
+ 1454  cd PersonalProject
+ 1455  cd ..
+ 1456  cd ..
+ 
+ 1458  cd Projects/
+ 
+ 1460  pip freeze > requirements.txt
+ 1461  cd duel/frontend
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 
+ 1469  cd duel
+ 
+ 1471  source duel_venv/activate/bin
+ 1472  source duel_venv/bin/activate
+ 1473  cd duelproject
+ 
+ 
+ 
+ 
+ 
+ 1479  source /Users/garrettadams/CodeP/PersonalProject/duel/duel_venv/bin/activate
+ 1480  cd duel/frontend
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1491  source /Users/garrettadams/CodeP/PersonalProject/duel/duel_venv/bin/activate
+ 1492  cd duel/duelproject
+ 
+ 1494  install psycopg2
+ 1495  pip install psycopg2
+ 1496  psql postgres
+ 1497  createdb assessment_5
+ 1498  python manage.py makemigrations
+ 
+ 
+ 1501  pip install psql
+ 1502  pip install postgres
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 1511  source /Users/garrettadams/CodeP/PersonalProject/duel/duel_venv/bin/activate
+ 1512  source /Users/garrettadams/CodeP/PersonalProject/duel/duel_venv/bin/activate
+ 1513  cd .
+ 1514  cd ..
+ 
+ 1516  cd Week6
+ 
+ 1518  cd assessment-3
+ 
+ 1520  code .
+ 1
+ 1
+ 1
+ 1524  npm run preview
+ 1525  source /Users/garrettadams/CodeP/PersonalProject/duel/duel_venv/bin/activate
+ 1526  cd duel/frontend
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1544  npm prune
+ 1
+ 1
+ 1547  npm install @material-ui/icons
+ 1
+ 1
+ 1550  npm i @mui/icons-material
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1574  vite build --watch
+ 1575  vite build --watch
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1581  source /Users/garrettadams/CodeP/PersonalProject/duel/duel_venv/bin/activate
+ 1582  cd duel/duelproject
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 1611  cd ..
+ 
+ 1613  cd 
+ 1614  cd Week5
+ 
+ 1616  cd ..
+ 1617  cd Week4
+ 
+ 1619  cd ..
+ 1620  cd Week7
+ 1621  cd ..
+ 1622  cd ReactPrac
+ 
+ 1624  cd TicTacToe
+ 1625  code .
+ 1626  cd ..
+ 1627  cd ..
+ 1628  cd PersonalProject
+ 
+ 1630  cd duel
+ 
+ 1632  cd ..
+ 1633  rm -rf .git
+ 
+ 1635  cd duel
+ 1636  code .
+ 1637  cd duelproject
+ 1638  python manage.py makemigrations
+ 1639  cd ..
+  
+ 1641  source duel_venv/bin/activate
+ 1642  cd duelproject
+ 1643  python manage.py makemigrations
+ 1644  python manage.py migrate
+ 1645  GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO postgres;
+ 1646  psql
+ 1647  psql assessment_5
+ 1648  manage.py loaddata base_chars
+ 1649  python manage.py loaddata base_chars
+ 1650  python manage.py loaddata base_chars.json
+ 1651  cd duelapp
+ 1652  python manage.py loaddata base_chars
+ 1653  cd ..
+ 1654  python manage.py loaddata base_chars
+ 1655  python manage.py loaddata base_chars
+ 1656  python manage.py loaddata base_chars
+ 1657  cd ..
+ 1658  cd frontend
+ 
+ 1660  npm install @mui/material @emotion/react @emotion/styled\n
+ 1661  cd ..
+ 1662  cd duelproject
+ 
+ 1664  python manage.py loaddata app_user
+ 1665  python manage.py loaddata moves
+ 1666  python manage.py loaddata moves
+ 1667  python manage.py loaddata moves
+ 1668  psql assessment_5;
+ 1669  drop database assessment_5;
+ 1670  psql assessment_5;
+ 1671  delete assessment_5;
+ 1672  psql
+ 1673  psql delete assessment_5;
+ 1674  psql postgres;
+ 1675  psql assessment_5;
+ 1676  psql postgres;
+ 1677  python manage.py makemigrations
+ 1678  python manage.py migrate
+ 1679  python manage.py loaddata app_user
+ 1680  python manage.py loaddata base_chars
+ 1681  python manage.py loaddata moves
+ 1682  psql assessment_5;
+ 1683  python manage.py loaddata moves
+ 1684  python manage.py loaddata moves
+ 1685  pip install dotenv
+ 1686  pip install python-dotenv
+ 1687  source /Users/garrettadams/CodeP/PersonalProject/duel/duel_venv/bin/activate
+ 
+ 1689  cd duel
+ 1690  cd duelproject
+ 
+ 
+ 
+ 1694  source /Users/garrettadams/CodeP/PersonalProject/duel/duel_venv/bin/activate
+ 1695  cd duel/frontend
+ 1
+ 1
+ 
+ 1699  source duel_venv/bin/activate
+ 1700  pip freeze
+ 1701  cd ..
+ 1702  cd ..
+ 
+ 1704  cd Projects
+ 1705  git clone https://github.com/evanag116/retro.git
+ 
+ 1707  cd retro
+ 1708  rm -rf .git
+ 1709  code .
+ 1710  cd ..
+ 
+ 1712  cd ..
+ 
+ 1714  cd PersonalProject
+ 
+ 1716  cd duel
+ 1717  history
+ 1718  history 100
+ 1719  psql delete assessment_5;
+ 1720  delete assessment_5;
+ 1721  psql postgres;
