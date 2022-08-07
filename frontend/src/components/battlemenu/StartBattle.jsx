@@ -16,8 +16,8 @@ function StartBattle(props){
 
     return(
         <div>
-            {(props.selChar || props.selChar == 0)&& <Button variant="outlined" onClick={props.BattleStart}>Start Duel</Button>}
-            <Typography gutterBottom variant="h5" component="div">Select Your Player</Typography>
+            <Typography gutterBottom variant="h3" component="div">Select Your Player</Typography>
+            {(props.selChar || props.selChar == 0)&& <Button size = "big" variant="outlined" onClick={props.BattleStart}>Start Duel</Button>}
             <div className="row">
             {props.charData.map((character, index) => {
                 props.selChar===index ? show = 'show' : show = false

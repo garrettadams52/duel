@@ -21,30 +21,30 @@ function Enemy({turn,setTurn,playerTwoHealth, inflictDamage, setEnemyData}){
     const getSetEnemyData = async () => {
         const poke = await getPokemon();
         const attacks = await getAttacks();
-        const stats = getStats();
         const img = poke.sprites.front_default
         setPokeData(img)
         setAttackData(attacks)
-        setEnemyData(stats)
+        setEnemyData(getStats())
     }
 
     const attack = (move) => {
-        setTurn("Player One")
-        inflictDamage(move)
+        setTimeout(setTurn,3000,"Player One")
+        setTimeout(inflictDamage,3000,move)
       }
 
     useEffect(() => {
         getSetEnemyData()
     }, [])
 
-    
+    if(turn === "Player Two"){
+        let rand = Math.floor(Math.random() * (3))
+        attack(attackData[rand])
+        
+    }
     turn === "Player Two" ? turnCss = "color" : turnCss = "false"
     return (
         <div>
-            <h1>Player Two</h1>
-            <h2>Health: {playerTwoHealth} </h2>
-            <div><img className={turnCss} src={pokeData}></img></div>
-            {attackData && <div> {attackData.map(elem => <Button variant="outlined" onClick={()=>(turn === "Player Two") && attack(elem)}>{elem["name"]}</Button>)} </div>}
+            <div><img className={turnCss} src={pokeData} width = "300" height = "300"></img></div>
         </div>
     )
   }

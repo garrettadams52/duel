@@ -6,9 +6,9 @@ const baseUrlDnD = "https://www.dnd5eapi.co/api"
 const makeUrl = (baseUrl, relativeUrl) => `${baseUrl}/${relativeUrl}`
 
 export const getPokemon = async () => {
-    let rand = Math.floor(Math.random() * (1100))
+    let rand = Math.floor(Math.random() * (900))
     const response = await axios.get(makeUrl(baseUrlPoke,`pokemon/${rand}`))
-    return response.data;
+    return response.data
 }
 
 export const getAttacks = async () => {
@@ -18,7 +18,8 @@ export const getAttacks = async () => {
             const randName = response.data.results[rand]['name']
             const randAccuracy = Math.floor(Math.random() * (10))+1
             const randPower = Math.floor(Math.random() * (10))+1
-        return {name:randName, accuracy:randAccuracy, power: randPower}
+            const randMag = Math.random() < 0.5
+        return {name:randName, accuracy:randAccuracy, power: randPower, magical: randMag}
     })
     
     return movesArr

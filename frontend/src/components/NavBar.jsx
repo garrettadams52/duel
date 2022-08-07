@@ -22,12 +22,12 @@ const settings = ['Account', 'Logout'];
 
 
 function stringAvatar(name) {
-  
+  let fix = name.replaceAll("  "," ")
   return {
     sx: {
       bgcolor: 'black',
     },
-    children: `${name.split(' ')[0][0]}${name.split(' ')[1][0]}`,
+    children: `${fix.split(' ')[0][0]}${fix.split(' ')[1][0]}`,
   };
 }
 

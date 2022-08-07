@@ -26,6 +26,7 @@ class Character(models.Model):
     spirit = models.IntegerField()
 
     #Else
+    #add description
     type = models.CharField(max_length=255)
     name = models.CharField(max_length=255)
     level = models.IntegerField()
