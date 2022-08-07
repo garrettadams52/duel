@@ -80,9 +80,9 @@ export default function SignInSide({user,setUser}) {
               <LockOutlinedIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
-              Sign in
+              {user ? `Signed in as ${user.first_name}` : "Sign In"}
             </Typography>
-            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
+            {!user && <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
               <TextField
                 margin="normal"
                 required
@@ -120,7 +120,7 @@ export default function SignInSide({user,setUser}) {
                 </Grid>
               </Grid>
               <Copyright sx={{ mt: 5 }} />
-            </Box>
+            </Box>}
           </Box>
         </Grid>
       </Grid>

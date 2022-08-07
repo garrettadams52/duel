@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const baseUrlPoke = "https://pokeapi.co/api/v2";
-const baseUrlDnD = "https://www.dnd5eapi.co/api"
+const baseUrlDnD = "https://www.dnd5eapi.co/api";
+const baseUrlName = "https://randomuser.me/api/";
 
 const makeUrl = (baseUrl, relativeUrl) => `${baseUrl}/${relativeUrl}`
 
@@ -23,4 +24,9 @@ export const getAttacks = async () => {
     })
     
     return movesArr
+}
+
+export const getName = async () => {
+    const response = await axios.get(baseUrlName)
+    return response.data
 }

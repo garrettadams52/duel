@@ -1,14 +1,15 @@
-import { getAttacks, getPokemon } from "../../api/GetEnemy"
+import { getAttacks, getName, getPokemon } from "../../api/GetEnemy"
 import {useState,useEffect} from "react"
 import './dueling.css'
 import  Button from "@mui/material/Button"
 
 
-function Enemy({turn,setTurn,playerTwoHealth, inflictDamage, setEnemyData}){
-    let turnCss = "color"
 
+function Enemy({turn,setTurn, inflictDamage, setEnemyData, setEnemyName, setEnemyAttacking, enemyAttacking,setPlayerHit, enemyHit}){
+    let turnCss = "false"
     const [pokeData, setPokeData] = useState(null)
     const [attackData, setAttackData] = useState(null)
+    
     
     const getStats = () => {
         const fields = ['accuracy','defense','evasion','spirit','strength','wisdom']
@@ -21,16 +22,28 @@ function Enemy({turn,setTurn,playerTwoHealth, inflictDamage, setEnemyData}){
     const getSetEnemyData = async () => {
         const poke = await getPokemon();
         const attacks = await getAttacks();
+        const name = await getName();
         const img = poke.sprites.front_default
         setPokeData(img)
         setAttackData(attacks)
         setEnemyData(getStats())
+        setEnemyName(name.results[0].name.first)
     }
 
     const attack = (move) => {
-        setTimeout(setTurn,3000,"Player One")
-        setTimeout(inflictDamage,3000,move)
-      }
+        setTimeout(()=>{
+            inflictDamage(move)
+            setTurn("Player One")
+            setEnemyAttacking('eneAttack')
+            setTimeout(setEnemyAttacking,200,"eneReset")
+            setPlayerHit('hit')
+            setTimeout(setPlayerHit,500,"")
+
+        },3000)
+    
+    }
+
+
 
     useEffect(() => {
         getSetEnemyData()
@@ -44,7 +57,7 @@ function Enemy({turn,setTurn,playerTwoHealth, inflictDamage, setEnemyData}){
     turn === "Player Two" ? turnCss = "color" : turnCss = "false"
     return (
         <div>
-            <div><img className={turnCss} src={pokeData} width = "300" height = "300"></img></div>
+            <div><img className={`${enemyAttacking} ${enemyHit} ${turnCss}`} src={pokeData} width = "300" height = "300"></img></div>
         </div>
     )
   }

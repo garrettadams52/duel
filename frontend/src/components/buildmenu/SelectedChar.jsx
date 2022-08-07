@@ -1,4 +1,4 @@
-function SelectedChar({selectChar}){
+function SelectedChar({selectChar,baseCharData}){
     let desc = ''
     if(selectChar['fields']['type']=="Cleric")
       desc = 'Clerics are versatile figures, both capable in combat and skilled in the use of divine magic (thaumaturgy). Clerics are powerful healers due to the large number of healing and curative magics available to them. With divinely-granted abilities over life or death, they are also able to repel or control undead creatures.'
@@ -18,13 +18,13 @@ function SelectedChar({selectChar}){
             </div>
             <div className='col-md-6'>
                 <ul style={{'list-style':'none'}}>
-                    <li>Type: {selectChar['fields']['type']}</li>
-                    <li>Strength: {selectChar['fields']['strength']}</li>
-                    <li>Defense: {selectChar['fields']['defense']}</li>
-                    <li>Evasion: {selectChar['fields']['evasion']}</li>
-                    <li>Spirit: {selectChar['fields']['spirit']}</li>
-                    <li>Wisdom: {selectChar['fields']['wisdom']}</li>
-                    <li>Accuracy: {selectChar['fields']['accuracy']}</li>
+                    <li>Type: {baseCharData[selectChar['pk']-1]['fields']['type']}</li>
+                    <li>Strength: {baseCharData[selectChar['pk']-1]['fields']['strength']}</li>
+                    <li>Defense: {baseCharData[selectChar['pk']-1]['fields']['defense']}</li>
+                    <li>Evasion: {baseCharData[selectChar['pk']-1]['fields']['evasion']}</li>
+                    <li>Spirit: {baseCharData[selectChar['pk']-1]['fields']['spirit']}</li>
+                    <li>Wisdom: {baseCharData[selectChar['pk']-1]['fields']['wisdom']}</li>
+                    <li>Accuracy: {baseCharData[selectChar['pk']-1]['fields']['accuracy']}</li>
                     <hr></hr>
                     <li>{desc}</li>
                 </ul>

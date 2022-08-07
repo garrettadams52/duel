@@ -1,5 +1,5 @@
 import Enemy from './Enemy'
-import Character from './Character'
+import {Bar} from './HealthBar'
 import "./dueling.css"
 import { useState } from 'react'
 import  Button from "@mui/material/Button"
@@ -12,7 +12,12 @@ function Dueling(props){
     const [playerTwoHealth, setPlayerTwoHealth] = useState(100)
     const [enemyData, setEnemyData] = useState(null)
     const [currAttack, setCurrAttack] = useState('')
-    let showTurn = "false"
+    const [attacking, setAttacking] = useState('')
+    const [enemyAttacking, setEnemyAttacking] = useState('')
+    const [playerHit, setPlayerHit] = useState('')
+    const [enemyHit, setEnemyHit] = useState('')
+    const [enemyName,setEnemyName] = useState('')
+    let showTurn = 'false'
     let moveArr = []
     props.moves[props.selChar['fields']['type']].forEach(elem => {
         moveArr.push(elem['fields'])
@@ -37,11 +42,25 @@ function Dueling(props){
             }
         }
 
+        console.log(turn,move,damage)
+
+
     }
 
     const attack = (move) => {
-        setTurn("Player Two")
-        inflictDamage(move)
+
+        setAttacking('attack')
+        setTimeout(()=>{
+            setAttacking("reset")
+            inflictDamage(move)
+            setEnemyHit('hit')
+            setTimeout(()=>{
+                setEnemyHit('')
+                setTimeout(()=>{
+                    setTurn("Player Two")
+                },200)
+            },500)
+        },200)
     }
 
     useEffect(()=>{
@@ -51,21 +70,21 @@ function Dueling(props){
         <div className='container'>
             <div className='row align-items-center' style={{'height':'20vh', 'overflow': 'hidden'}}>
                 <div className='col-md-3'>
-                    <h1>{props.selChar['fields']['name']}</h1>
-                    <h2>Health: {playerOneHealth} </h2>
-                    </div>
+                    <Bar label={props.selChar['fields']['name']} value={playerOneHealth}/>
+                </div>
                 <div className='col-md-6'>
                     
                 </div>
                 <div className='col-md-3'>
-                    <h1>Player Two</h1>
-                    <h2>Health: {playerTwoHealth} </h2>
+                    <Bar label={enemyName} value={playerTwoHealth}/>
                 </div> 
             </div>
             <div className='row align-items-end' style={{'height':'45vh', 'overflow': 'hidden'}}>
                 <div className='wrapper'>
-                    <Character turn={showTurn} selChar={props.selChar}/>
-                    <Enemy setTurn={setTurn} inflictDamage={inflictDamage} setPlayerOneHealth = {setPlayerOneHealth} playerTwoHealth={playerTwoHealth} turn={turn} setEnemyData={setEnemyData}/>
+                    <div className = {"row align-items-center justify-content-center"} style={{'width':"300px", 'height': "300px"}}>
+                        <div className={`icon ${turn} ${showTurn} ${playerHit} flip ${attacking} sprite${props.selChar['fields']['type']}`} ></div>
+                    </div>
+                    <Enemy setEnemyName={setEnemyName} setTurn={setTurn} enemyHit={enemyHit} setPlayerHit={setPlayerHit} enemyAttacking={enemyAttacking} inflictDamage={inflictDamage} setPlayerOneHealth = {setPlayerOneHealth} playerTwoHealth={playerTwoHealth} turn={turn} setEnemyAttacking = {setEnemyAttacking} setEnemyData={setEnemyData}/>
                 </div>
             </div>
             <div className='row align-items-end' style={{'height':'20vh','overflow': 'hidden'}}>

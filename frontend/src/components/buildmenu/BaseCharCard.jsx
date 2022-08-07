@@ -21,6 +21,7 @@ export default function CardDisplay({character,moveArr,set}) {
         <Typography gutterBottom variant="h5" component="div">
             {character['fields']['type']}
         </Typography>
+        <hr></hr>
         <ul style={{'list-style':'none'}}>
             <li>Strength: {character['fields']['strength']}</li>
             <li>Defense: {character['fields']['defense']}</li>
@@ -28,6 +29,7 @@ export default function CardDisplay({character,moveArr,set}) {
             <li>Spirit: {character['fields']['spirit']}</li>
             <li>Wisdom: {character['fields']['wisdom']}</li>
             <li>Accuracy: {character['fields']['accuracy']}</li>
+            <hr></hr>
             <li>Moves: {moveArr.join(', ')}</li>
         </ul>
       </CardContent>

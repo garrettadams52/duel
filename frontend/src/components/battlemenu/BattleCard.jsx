@@ -9,7 +9,7 @@ import '../buildmenu/characterbuild.css'
 
 export default function BattleCard({set,character,show}) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card className={show} sx={{ maxWidth: 345 }}>
         <Typography gutterBottom variant="h5" component="div">
             {character['fields']['name']}
         </Typography>
@@ -20,7 +20,7 @@ export default function BattleCard({set,character,show}) {
         style = {{'margin': '0 auto'}}
       />
       <CardContent>
-        <ul className={show} style={{'list-style':'none'}}>
+        <ul style={{'list-style':'none'}}>
             <li>Type: {character['fields']['type']}</li>
             <li>Level: {character['fields']['level']}</li>
             <li>Experience: {character['fields']['experience']}</li>
