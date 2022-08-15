@@ -1,4 +1,7 @@
+import { List, ListItemText, Typography } from "@mui/material"
+
 function SelectedChar({selectChar,baseCharData}){
+  console.log("it worked")
     let desc = ''
     if(selectChar['fields']['type']=="Cleric")
       desc = 'Clerics are versatile figures, both capable in combat and skilled in the use of divine magic (thaumaturgy). Clerics are powerful healers due to the large number of healing and curative magics available to them. With divinely-granted abilities over life or death, they are also able to repel or control undead creatures.'
@@ -13,21 +16,21 @@ function SelectedChar({selectChar,baseCharData}){
     <div>
 
         <div className='row'>
-            <div className='col-md-6'>
+            <div className='col-md-6 align-items-center align-self-center'>
                 <div className={`disp${selectChar['fields']['type']} sprite${selectChar['fields']['type']}`}></div>
             </div>
             <div className='col-md-6'>
-                <ul style={{'list-style':'none'}}>
-                    <li>Type: {baseCharData[selectChar['pk']-1]['fields']['type']}</li>
-                    <li>Strength: {baseCharData[selectChar['pk']-1]['fields']['strength']}</li>
-                    <li>Defense: {baseCharData[selectChar['pk']-1]['fields']['defense']}</li>
-                    <li>Evasion: {baseCharData[selectChar['pk']-1]['fields']['evasion']}</li>
-                    <li>Spirit: {baseCharData[selectChar['pk']-1]['fields']['spirit']}</li>
-                    <li>Wisdom: {baseCharData[selectChar['pk']-1]['fields']['wisdom']}</li>
-                    <li>Accuracy: {baseCharData[selectChar['pk']-1]['fields']['accuracy']}</li>
+                <List>
+                    <ListItemText>Type: {baseCharData[selectChar['pk']-1]['fields']['type']}</ListItemText>
+                    <ListItemText>Base Strength: {baseCharData[selectChar['pk']-1]['fields']['strength']}</ListItemText>
+                    <ListItemText>Base Defense: {baseCharData[selectChar['pk']-1]['fields']['defense']}</ListItemText>
+                    <ListItemText>Base Evasion: {baseCharData[selectChar['pk']-1]['fields']['evasion']}</ListItemText>
+                    <ListItemText>Base Spirit: {baseCharData[selectChar['pk']-1]['fields']['spirit']}</ListItemText>
+                    <ListItemText>Base Wisdom: {baseCharData[selectChar['pk']-1]['fields']['wisdom']}</ListItemText>
+                    <ListItemText>Base Accuracy: {baseCharData[selectChar['pk']-1]['fields']['accuracy']}</ListItemText>
                     <hr></hr>
-                    <li>{desc}</li>
-                </ul>
+                    <Typography>{desc}</Typography>
+                </List>
             </div>
         </div>
         

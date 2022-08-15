@@ -3,13 +3,12 @@ import axios from 'axios';
 const baseUrlPoke = "https://pokeapi.co/api/v2";
 const baseUrlDnD = "https://www.dnd5eapi.co/api";
 const baseUrlName = "https://randomuser.me/api/";
-
 const makeUrl = (baseUrl, relativeUrl) => `${baseUrl}/${relativeUrl}`
 
 export const getPokemon = async () => {
     let rand = Math.floor(Math.random() * (900))
     const response = await axios.get(makeUrl(baseUrlPoke,`pokemon/${rand}`))
-    return response.data
+    return response.data.sprites.front_default
 }
 
 export const getAttacks = async () => {
@@ -28,5 +27,5 @@ export const getAttacks = async () => {
 
 export const getName = async () => {
     const response = await axios.get(baseUrlName)
-    return response.data
+    return response.data.results[0].name.first
 }

@@ -12,12 +12,13 @@ function StartBattle(props){
 
     useEffect(() => {
         props.getSetCharandMoveData()
+        props.setEnemyData(null)
     }, [])
 
     return(
         <div>
-            <Typography gutterBottom variant="h3" component="div">Select Your Player</Typography>
-            {(props.selChar || props.selChar == 0)&& <Button size = "big" variant="outlined" onClick={props.BattleStart}>Start Duel</Button>}
+            <Typography  variant="h3" component="div">Select Your Player</Typography>
+            <Button size = "big" disabled={!(props.selChar || props.selChar == 0)} sx={{mb:4}} variant="outlined" onClick={props.BattleStart}>Start Duel</Button>
             <div className="row">
             {props.charData.map((character, index) => {
                 props.selChar===index ? show = 'show' : show = false

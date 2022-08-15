@@ -1,9 +1,10 @@
+import { Typography } from '@mui/material';
 import './dueling.css'
 
 export const Bar = ({ value, label }) => (
   <div className='main'>
-    <div className='label'>{label}</div>
-    <div className='max'>
+    <Typography variant="h4" className='label'>{label}</Typography>
+    <div className='max' style={{color:"#808080" }}>
       <div
         className='value'
         style={{ width: `${value}%` }}

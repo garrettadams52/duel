@@ -1,5 +1,4 @@
 import './characterbuild.css'
-import  Button from "@mui/material/Button"
 import CardDisplay from './BaseCharCard'
 
 function BaseChar(props){
@@ -18,6 +17,5 @@ return(
 )
 
 }
-import newBaseChar from './BaseCharCard'
 
 export default BaseChar;

@@ -15,7 +15,7 @@
 }
 
 .icon{
-    width: 82px !important; 
+    width: 74px !important; 
     height: 105px !important;
     background-position: 0px -10px !important;
     background-size: auto !important;
@@ -54,16 +54,16 @@
 }
 
 .battleFighter{
-    background-position: -1873px -2927px !important; 
-    width: 73px;
-    height: 113px;
+    background-position: -1331px -950px !important; 
+    width: 86px;
+    height: 77px;
     background-size: auto !important;
 }
 
 .battleElf{
-    background-position: -934px -2112px !important; 
-    width: 51px;
-    height: 115px;
+    background-position: -901px -1205px !important; 
+    width: 77px;
+    height: 81px;
     background-size: auto !important;
 }
 

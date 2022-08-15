@@ -6,16 +6,16 @@ import InteractiveList from '../components/viewmenu/ListSelected';
 
 const columns = [
   { field: 'type', headerName: 'Type', width: 70 },
-  { field: 'nickname', headerName: 'Nickname?', width: 70 },
-  { field: 'accuracy', headerName: 'Acc', width: 45 },
-  { field: 'defense', headerName: 'Def', width: 45 },
-  { field: 'evasion', headerName: 'Eva', width: 45 },
-  { field: 'exp', headerName: 'Exp', width: 130 },
+  { field: 'name', headerName: 'Name', width: 70 },
   { field: 'level', headerName: 'Lvl', width: 45 },
-  { field: 'spirit', headerName: 'Spr', width: 45 },
+  { field: 'exp', headerName: 'Exp', width: 100 },
   { field: 'strength', headerName: 'Str', width: 45 },
+  { field: 'defense', headerName: 'Def', width: 45 },
+  { field: 'accuracy', headerName: 'Acc', width: 45 },
+  { field: 'evasion', headerName: 'Eva', width: 45 },
+  { field: 'spirit', headerName: 'Spr', width: 45 },
   { field: 'wisdom', headerName: 'Wis', width: 45 },
-  { field: 'moves', headerName: 'Moves', width: 250 },
+  { field: 'moves', headerName: 'Moves', width: 300 },
   { field: 'pk', hide: true},
 ];
 
@@ -27,7 +27,7 @@ const getRows = (charData,moves) => {
             moves[elem.fields.type].forEach((elem)=>{
                 moveNames.push(elem.fields.name)
             })
-            let obj = {pk:elem.pk, id:ind, type:elem.fields.type,nickname:elem.fields.name, accuracy:elem.fields.accuracy,defense:elem.fields.defense,evasion:elem.fields.evasion,exp:elem.fields.experience,level:elem.fields.level,spirit:elem.fields.spirit,strength:elem.fields.strength,wisdom:elem.fields.wisdom,moves:moveNames.join(", ")}
+            let obj = {pk:elem.pk, id:ind, type:elem.fields.type,name:elem.fields.name, accuracy:elem.fields.accuracy,defense:elem.fields.defense,evasion:elem.fields.evasion,exp:elem.fields.experience,level:elem.fields.level,spirit:elem.fields.spirit,strength:elem.fields.strength,wisdom:elem.fields.wisdom,moves:moveNames.join(", ")}
             rows.push(obj)
         })
     }
@@ -60,7 +60,7 @@ export default function View({getSetCharandMoveData,moves,charData}) {
             />
         </div>
         {selected && <div className='col-md-6'>
-        <InteractiveList setSelected={setSelected} getSetCharandMoveData = {getSetCharandMoveData} selected={selected}/>
+        <InteractiveList setSelected={setSelected} moves={moves} getSetCharandMoveData = {getSetCharandMoveData} selected={selected}/>
         </div>}
     </div>
 

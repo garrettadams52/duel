@@ -1,3 +1,4 @@
+import { Typography,Button } from '@mui/material'
 import axios from 'axios'
 
 
@@ -20,7 +21,6 @@ function EndBattle(props){
 
     }
 
-
     if(props.battleMode == 'wonBattle'){
         message = "You won the battle!"
         ExpGain(exp, props.character,levelUp)
@@ -31,10 +31,10 @@ function EndBattle(props){
 
     return(
         <div>
-            <h1>{message}</h1>
-            {props.battleMode == 'wonBattle' && <h3>You gained {exp.toFixed(2)} experience points!</h3>}
-            {(levelUp === true) && <h3>You Leveled Up!</h3>}
-            <button onClick={props.BattleEnd}>Return Home</button>
+            <Typography variant="h1">{message}</Typography>
+            {props.battleMode == 'wonBattle' && <Typography variant='h3'>You gained {exp.toFixed(2)} experience points!</Typography>}
+            {(levelUp === true) && <Typography variant='h3'>You Leveled Up!</Typography>}
+            <Button variant="contained" color="secondary" size="medium" onClick={props.BattleEnd}>Return Home</Button>
         </div>
     )
 }

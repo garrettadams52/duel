@@ -3,12 +3,12 @@
         "model":"duelapp.basecharacter",
         "pk": 1,
         "fields":{
-            "strength": 5,
-            "defense": 4,
-            "accuracy": 4,
-            "evasion": 8,
+            "strength": 4,
+            "defense": 6,
+            "accuracy": 8,
+            "evasion": 6,
             "wisdom": 9,
-            "spirit": 3,
+            "spirit": 8,
             "type": "Cleric"
         }
     },
@@ -18,7 +18,7 @@
         "fields":{
             "strength": 8,
             "defense": 3,
-            "accuracy": 4,
+            "accuracy": 6,
             "evasion": 8,
             "wisdom": 9,
             "spirit": 3,
@@ -31,10 +31,10 @@
         "fields":{
             "strength": 5,
             "defense": 4,
-            "accuracy": 4,
+            "accuracy": 7,
             "evasion": 8,
             "wisdom": 9,
-            "spirit": 3,
+            "spirit": 6,
             "type": "Elf"
         }
     },
@@ -42,11 +42,11 @@
         "model":"duelapp.basecharacter",
         "pk": 4,
         "fields":{
-            "strength": 5,
-            "defense": 4,
+            "strength": 9,
+            "defense": 7,
             "accuracy": 4,
-            "evasion": 8,
-            "wisdom": 9,
+            "evasion": 5,
+            "wisdom": 2,
             "spirit": 3,
             "type": "Fighter"
         }

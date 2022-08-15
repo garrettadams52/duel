@@ -4,11 +4,11 @@ import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import axios from "axios"
 
-export default function FormDialog({selected,reload,setReload}) {
+
+export default function FormDialog({selected,reload,setReload,setSelected}) {
   const [open, setOpen] = React.useState(false);
   const [input, setInput] = React.useState('')
 
@@ -23,8 +23,8 @@ export default function FormDialog({selected,reload,setReload}) {
   const updateName = function(event,selected,input){
     event.preventDefault()
     axios.post('/updatename', {pk:selected['pk'], 'new_name':input}).then((response)=>{
-        console.log('response from server: ', response)
         handleClose()
+        setSelected(null)
         reload === 1 ? setReload(2) : setReload(1)
      })
      

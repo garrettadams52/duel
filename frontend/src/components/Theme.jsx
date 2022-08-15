@@ -1,13 +1,16 @@
-import { createTheme,ThemeProvider } from '@mui/material';
+import { createTheme} from '@mui/material';
 
 export const themeOptions = createTheme({
+    typography: {
+      fontFamily: ['MedievalSharp', 'cursive'].join(','),
+    },
     palette: {
       type: 'dark',
       primary: {
-        main: '#dc6f6f',
+        main: '#020024',
       },
       secondary: {
-        main: '#9e4696',
+        main: '#79091a',
       },
       text: {
         primary: '#73090b',
@@ -21,7 +24,7 @@ export const themeOptions = createTheme({
     overrides: {
       MuiButton: {
         root: {
-          background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+          background: 'inherit',
           border: 0,
           borderRadius: 3,
           boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
@@ -32,8 +35,15 @@ export const themeOptions = createTheme({
       },
     },
     props: {
+      MuiGrid:{
+        background:'inherit',
+      },
       MuiList: {
         dense: true,
+      },
+      MuiMenu: {
+        dense: true,
+        hideBackDrop: true,
       },
       MuiMenuItem: {
         dense: true,

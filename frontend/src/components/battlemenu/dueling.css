@@ -23,6 +23,7 @@
 .reset{
     transition: 0.1s;
     transform: scaleX(-1);
+    animation: .3s .3s infinite;
 }
 
 .eneAttack{
@@ -37,7 +38,7 @@
 .hit {
     opacity: 1;
     animation: flash 0.3s 0.3s infinite;
-  }
+}
 
   @keyframes flash {
     0% {
@@ -50,8 +51,6 @@
       opacity: 0;
     }
   }
-
-
 
 .main {
     display: flex;
@@ -81,9 +80,15 @@
     flex: 1;
     background-color: lightgray;
   }
+
   .value {
     height: 100%;
-    background-color: #0566fa;
-  
+    background-color: #020025;
     transition: 0.35s;
   }
+
+  .battleDialog{
+    border-style: double;
+  }
+
+  

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import 'animate.css';
 import axios from 'axios'
 import {HashRouter as Router, Routes, Route} from 'react-router-dom'
 import View from './pages/View';
@@ -14,24 +15,6 @@ import ResponsiveAppBar from './components/NavBar';
 import Account from './pages/Account';
 import { themeOptions } from './components/Theme';
 
-//Create Cookie for session
-function getCookie(name) {
-  let cookieValue = null;
-  if (document.cookie && document.cookie !== '') {
-      const cookies = document.cookie.split(';');
-      for (let i = 0; i < cookies.length; i++) {
-          const cookie = cookies[i].trim();
-          // Does this cookie string begin with the name we want?
-          if (cookie.substring(0, name.length + 1) === (name + '=')) {
-              cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-              break;
-          }
-      }
-  }
-  return cookieValue;
-}
-const csrftoken = getCookie('csrftoken');
-axios.defaults.headers.common['X-CSRFToken'] = csrftoken
 
 
 function App() {
@@ -45,6 +28,7 @@ function App() {
     const moveData = await getMoves();
     setMoveData(moveData)
   }
+
 
   useEffect(() => {
     getSetCharandMoveData()

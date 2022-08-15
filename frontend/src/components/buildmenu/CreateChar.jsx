@@ -3,6 +3,7 @@ import  Slider  from '@mui/material/Slider'
 import axios from 'axios'
 import  Button from "@mui/material/Button"
 import Input from '@mui/material/Input';
+import { List, ListItemText, Typography } from '@mui/material';
 
 
 
@@ -28,9 +29,8 @@ function CreateChar(props){
                 return a+b
             return a+0
         })
-
-        console.log(e,inputValsSum,baseValsSum,props.availStat)
-        if(inputValsSum-baseValsSum<=10){
+        
+        if(((e.target.value-inputStat[stat])+inputValsSum)-baseValsSum<=10 || (e.movementX<=0 && (e.target.value<props.selectChar['fields'][stat]))){
             props.setAvailStat(10-(inputValsSum-baseValsSum))
             let temp = inputStat
             temp[stat] = e.target.value
@@ -62,12 +62,12 @@ function CreateChar(props){
   
 return(
     <div>
-        <div>Available Stat Points: {props.availStat}</div><Input type={'text'} onChange={(e)=>setNickName(e.target.value)} placeholder='Name'></Input><Button variant="outlined" disabled = {!nickName} onClick={(event)=>createChar(event,inputStat,nickName)}>Create Character</Button>
-        <ul style={{'list-style':'none'}}>
+        <Typography>Available Stat Points: {props.availStat}</Typography><Input type={'text'} onChange={(e)=>setNickName(e.target.value)} placeholder='Name'></Input><Button variant="outlined" disabled = {!nickName} onClick={(event)=>createChar(event,inputStat,nickName)}>Create Character</Button>
+        <List>
             {statType.map((val, ind)=>{
-                return <li key={ind}> {`${val.charAt(0).toUpperCase() + val.slice(1)}`}: {inputStat[val]} <Slider size={'small'} value={inputStat[val]} onChange={(e) => props.baseCharData[props.selectChar['pk']-1]['fields'][val]<= e.target.value && changeStat(e,val)} min={slideMin} max={slideMax} valueLabelDisplay="auto"/></li>
+                return <ListItemText key={ind}> {`${val.charAt(0).toUpperCase() + val.slice(1)}`}: {inputStat[val]} <Slider size={'small'} value={inputStat[val]} onChange={(e) => props.baseCharData[props.selectChar['pk']-1]['fields'][val]<= e.target.value && changeStat(e,val)} min={slideMin} max={slideMax} valueLabelDisplay="auto"/></ListItemText>
             })}
-        </ul>
+        </List>
     </div>
 )
 }

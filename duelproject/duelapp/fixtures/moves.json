@@ -3,53 +3,53 @@
         "model":"duelapp.moves",
         "pk": 1,
         "fields":{
-            "name": "smash",
+            "name": "Eagle Dive",
             "power": 5,
-            "accuracy": 4,
-            "magical": true,
-            "character": "3"
+            "accuracy": 8,
+            "magical": false,
+            "character": "2"
         }
     },
     {
         "model":"duelapp.moves",
         "pk": 2,
         "fields":{
-            "name": "push",
-            "power": 5,
-            "accuracy": 4,
-            "magical": true,
-            "character":"3"
+            "name": "Power Bomb",
+            "power": 7,
+            "accuracy": 6,
+            "magical": false,
+            "character":"2"
         }
     },
     {
         "model":"duelapp.moves",
         "pk": 3,
         "fields":{
-            "name": "fire ball",
-            "power": 5,
-            "accuracy": 4,
+            "name": "Powder Mastery",
+            "power": 7,
+            "accuracy": 7,
             "magical": true,
-            "character": "4"
+            "character": "2"
         }
     },
     {
         "model":"duelapp.moves",
         "pk": 4,
         "fields":{
-            "name": "roar",
-            "power": 5,
-            "accuracy": 4,
+            "name": "Arcane Sword",
+            "power": 7,
+            "accuracy": 5,
             "magical": true,
-            "character": "3"
+            "character": "1"
         }
     },
     {
         "model":"duelapp.moves",
         "pk": 5,
         "fields":{
-            "name": "punch",
+            "name": "Ice Storm",
             "power": 5,
-            "accuracy": 4,
+            "accuracy": 9,
             "magical": true,
             "character": "1"
         }
@@ -58,77 +58,77 @@
         "model":"duelapp.moves",
         "pk": 6,
         "fields":{
-            "name": "throw",
-            "power": 5,
-            "accuracy": 4,
-            "magical": true,
-            "character": "4"
+            "name": "Move Earth",
+            "power": 8,
+            "accuracy": 6,
+            "magical": false,
+            "character": "1"
         }
     },
     {
         "model":"duelapp.moves",
         "pk": 7,
         "fields":{
-            "name": "kick",
-            "power": 5,
-            "accuracy": 4,
-            "magical": true,
-            "character": "2"
+            "name": "Deadeye Shot",
+            "power": 4,
+            "accuracy": 10,
+            "magical": false,
+            "character": "4"
         }
     },
     {
         "model":"duelapp.moves",
         "pk": 8,
         "fields":{
-            "name": "tackle",
-            "power": 5,
-            "accuracy": 4,
+            "name": "Impact Arrow",
+            "power": 8,
+            "accuracy": 3,
             "magical": true,
-            "character": "1"
+            "character": "3"
         }
     },
     {
         "model":"duelapp.moves",
         "pk": 9,
         "fields":{
-            "name": "headbutt",
-            "power": 5,
-            "accuracy": 4,
-            "magical": true,
-            "character": "2"
+            "name": "Power Shot",
+            "power": 8,
+            "accuracy": 6,
+            "magical": false,
+            "character": "3"
         }
     },
     {
         "model":"duelapp.moves",
         "pk": 10,
         "fields":{
-            "name": "shove",
-            "power": 5,
-            "accuracy": 4,
+            "name": "Clone Strikes",
+            "power": 6,
+            "accuracy": 8,
             "magical": true,
-            "character": "4"
+            "character": "3"
         }
     },
     {
         "model":"duelapp.moves",
         "pk": 11,
         "fields":{
-            "name": "bolt attack",
-            "power": 5,
-            "accuracy": 4,
+            "name": "Crystal Blade",
+            "power": 9,
+            "accuracy": 3,
             "magical": true,
-            "character": "1"
+            "character": "4"
         }
     },
     {
         "model":"duelapp.moves",
         "pk": 12,
         "fields":{
-            "name": "arrow",
-            "power": 5,
+            "name": "Vorpal Sword",
+            "power": 9,
             "accuracy": 4,
-            "magical": true,
-            "character": "2"
+            "magical": false,
+            "character": "4"
         }
     }
 ]

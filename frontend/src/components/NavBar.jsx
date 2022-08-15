@@ -15,7 +15,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import axios from 'axios'
 import {useNavigate} from 'react-router-dom';
 
-const pages = ['View Characters', 'Build Characters', 'Battle'];
+const pages = ['Build Characters', 'View Characters', 'Battle'];
 const pagesObj = {'View Characters':'view', 'Build Characters':'build', 'Battle':'battle'};
 const settings = ['Account', 'Logout'];
 
@@ -80,7 +80,7 @@ const ResponsiveAppBar = ({user}) => {
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
+              fontFamily: 'MedievalSharp cursive',
               fontWeight: 700,
               letterSpacing: '.3rem',
               color: 'inherit',
@@ -136,7 +136,7 @@ const ResponsiveAppBar = ({user}) => {
               mr: 2,
               display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
-              fontFamily: 'monospace',
+              fontFamily: 'MedievalSharp cursive',
               fontWeight: 700,
               letterSpacing: '.3rem',
               color: 'inherit',
